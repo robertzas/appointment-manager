@@ -1,10 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="main">
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>Appointments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-hi
+<div class="navbar-fixed-top" ng-cloak>
+    <li>
+        <button fullpage-href="page1" class="btn btn-material-lime btn-fab btn-raised"></button>
+    </li>
+    <li>
+        <button fullpage-href="page2" class="btn btn-material-amber btn-fab btn-raised"></button>
+    </li>
+    <li>
+        <button fullpage-href="page3" class="btn btn-material-teal btn-fab btn-raised"></button>
+    </li>
+    <li>
+        <button fullpage-href="page4" class="btn btn-material-indigo btn-fab btn-raised"></button>
+    </li>
+</div>
+<fullpage class="instant-size" page-class="page">
+    <section class="page btn-material-lime" id="page1">
+        <section class="container">
+            <h1>Page 1</h1>
+        </section>
+    </section>
+    <section class="page btn-material-amber" id="page2">
+        <section class="container">
+            <h1>Page 2</h1>
+        </section>
+    </section>
+    <section class="page btn-material-teal" id="page3">
+        <section class="container">
+            <h1>Page 3</h1>
+        </section>
+    </section>
+    <section class="page btn-material-indigo" id="page4">
+        <section class="container">
+            <h1>Page 4</h1>
+        </section>
+    </section>
+</fullpage>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/br-fullpage/dist/br-fullpage.min.js"></script>
+<script type="text/javascript" src="bower_components/fullcalendar/fullcalendar.js"></script>
+<script type="text/javascript" src="bower_components/fullcalendar/gcal.js"></script>
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+
+
+<link rel="stylesheet" href="bower_components/br-fullpage/dist/br-fullpage.min.css"/>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.min.css"/>
+<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css"/>
+
+<link rel="stylesheet" href="styles/main.css"/>
+
 </body>
 </html>
+
+
+bower_components/bootstrap-material-design/dist/js/ripples.min.js

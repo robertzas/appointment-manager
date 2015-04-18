@@ -1,0 +1,16 @@
+.page{
+    padding-top: 70px;
+}
+.br-fullpage-nav{
+    display: none;
+}
+.navbar-fixed-top{
+    list-style-type: none;
+    position: fixed;
+    left: 10px;
+    top: 25%;
+    display: inline-block;
+    z-index: 2;
+    font-size:50px;
+    padding:50px
+}
