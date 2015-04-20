@@ -7,7 +7,6 @@ public class Location {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "location_id")
     private long id;
     private String name;
     @Column(name = "address_line1")

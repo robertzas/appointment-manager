@@ -8,24 +8,48 @@ public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "reservation_id")
     private long id;
     @Column(name = "start_timestamp")
     private Date startDate;
     @Column(name = "end_timestamp")
     private Date endDate;
     @Column(name = "price_quoted")
-    private Long priceQuoted;
+    private long priceQuoted;
     @Column(name = "customer_comments")
     private String comments;
     @Column(name = "amount_paid")
-    private Long amountPaid;
+    private long amountPaid;
     @Column(name = "coupon_code")
     private String couponCode;
     private String tip;
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "location_fk")
     private Location location;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "employee_fk")
+    private Employee employee;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "person_fk")
+    private Person person;
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 
     public Location getLocation() {
         return location;
@@ -59,11 +83,11 @@ public class Reservation {
         this.endDate = endDate;
     }
 
-    public Long getPriceQuoted() {
+    public long getPriceQuoted() {
         return priceQuoted;
     }
 
-    public void setPriceQuoted(Long priceQuoted) {
+    public void setPriceQuoted(long priceQuoted) {
         this.priceQuoted = priceQuoted;
     }
 
@@ -75,11 +99,11 @@ public class Reservation {
         this.comments = comments;
     }
 
-    public Long getAmountPaid() {
+    public long getAmountPaid() {
         return amountPaid;
     }
 
-    public void setAmountPaid(Long amountPaid) {
+    public void setAmountPaid(long amountPaid) {
         this.amountPaid = amountPaid;
     }
 
