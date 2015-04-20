@@ -1,14 +1,13 @@
 {
   "name": "team404.appointment-manager",
   "dependencies": {
-    "angular-ui-calendar": "latest",
     "br-fullpage": "latest",
     "ng-grid": "latest",
     "bootstrap": "latest",
-    "bootstrap-material-design": "latest"
+    "bootstrap-material-design": "latest",
+    "angular-bootstrap": "latest"
   },
   "resolutions": {
-    "angular": "~1.3.12",
-    "jquery": "~2.x"
+    "angular": "~1.3.12"
   }
 }

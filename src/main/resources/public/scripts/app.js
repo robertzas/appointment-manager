@@ -1,3 +1,8 @@
-(function(){
-    angular.module('main', ['ui.bootstrap','br.fullpage']);
-})();
+angular.module('app', ['ui.bootstrap','br.fullpage'])
+.controller('Home', ['$scope', function($scope){
+    $.material.init()
+
+}])
+.controller('CalendarCtrl', ['$scope', function($scope){
+
+}]);

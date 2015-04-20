@@ -1,5 +1,5 @@
 .page{
-    padding-top: 70px;
+    padding: 5%;
 }
 .br-fullpage-nav{
     display: none;
@@ -7,10 +7,15 @@
 .navbar-fixed-top{
     list-style-type: none;
     position: fixed;
-    left: 10px;
-    top: 25%;
-    display: inline-block;
+    left: 1%;
+    top: 1%;
+    display: inline;
     z-index: 2;
-    font-size:50px;
-    padding:50px
+    font-size: 50px;
+    padding: 3%
 }
+.jumbotron{
+    max-height: 95%;
+    overflow: hidden;
+}
+

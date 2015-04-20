@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="main">
+<html ng-app="app" ng-controller="Home">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Appointments</title>
@@ -8,63 +8,80 @@
 <body>
 <div class="navbar-fixed-top" ng-cloak>
     <li>
-        <button fullpage-href="page1" class="btn btn-material-lime btn-fab btn-raised"></button>
+        <button fullpage-href="page1" class="btn btn-material-teal shadow-z-5">
+            <i class="mdi-action-home"></i>
+        </button>
     </li>
     <li>
-        <button fullpage-href="page2" class="btn btn-material-amber btn-fab btn-raised"></button>
+        <button fullpage-href="page2" class="btn btn-material-light-blue shadow-z-5">
+            <i class="mdi-action-receipt"></i>
+        </button>
     </li>
     <li>
-        <button fullpage-href="page3" class="btn btn-material-teal btn-fab btn-raised"></button>
+        <button fullpage-href="page3" class="btn btn-material-indigo shadow-z-5">
+            <i class="mdi-action-today"></i>
+        </button>
     </li>
     <li>
-        <button fullpage-href="page4" class="btn btn-material-indigo btn-fab btn-raised"></button>
+        <button fullpage-href="page4" class="btn btn-material-purple shadow-z-5">
+            <i class="mdi-action-settings"></i>
+        </button>
     </li>
 </div>
 <fullpage class="instant-size" page-class="page">
-    <section class="page btn-material-lime" id="page1">
-        <section class="container">
-            <h1>Page 1</h1>
-        </section>
+    <section class="page well-material-teal-900" id="page1">
+        <div class="container">
+            <div class="shadow-z-5">
+                <div class="jumbotron">
+                    <div ng-include="" src="'views/home.html'"></div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="page btn-material-amber" id="page2">
-        <section class="container">
-            <h1>Page 2</h1>
-        </section>
+    <section class="page well-material-light-blue-900" id="page2">
+        <div class="container">
+            <div class="shadow-z-5">
+                <div class="jumbotron">
+                    <div ng-include="" src="'views/appointment.html'"></div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="page btn-material-teal" id="page3">
-        <section class="container">
-            <h1>Page 3</h1>
-        </section>
+    <section class="page well-material-indigo-900" id="page3">
+        <div class="container">
+            <div class="shadow-z-5">
+                <div class="jumbotron">
+                    <div ng-include="" src="'views/schedule.html'"></div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="page btn-material-indigo" id="page4">
-        <section class="container">
-            <h1>Page 4</h1>
-        </section>
+    <section class="page well-material-purple-900" id="page4" ng-controller="CalendarCtrl">
+        <div class="container">
+            <div class="shadow-z-5">
+                <div class="jumbotron">
+                    <div ng-include="" src="'views/manager.html'"></div>
+                </div>
+            </div>
+        </div>
     </section>
 </fullpage>
-<script type="text/javascript" src="bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script type="text/javascript" src="bower_components/br-fullpage/dist/br-fullpage.min.js"></script>
-<script type="text/javascript" src="bower_components/fullcalendar/fullcalendar.js"></script>
-<script type="text/javascript" src="bower_components/fullcalendar/gcal.js"></script>
-<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
-<script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
 <script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
 <script type="text/javascript" src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
 
-
 <link rel="stylesheet" href="bower_components/br-fullpage/dist/br-fullpage.min.css"/>
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.min.css"/>
+<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css"/>
+<link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/roboto.min.css"/>
 <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css"/>
 
 <link rel="stylesheet" href="styles/main.css"/>
 
 </body>
 </html>
-
-
-bower_components/bootstrap-material-design/dist/js/ripples.min.js
