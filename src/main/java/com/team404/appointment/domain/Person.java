@@ -21,9 +21,6 @@ public class Person {
     @Column(name = "date_joined")
     private Date dateJoined;
 
-    @OneToOne(optional = true, fetch = FetchType.LAZY)
-    private Employee employee;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "location_fk")
     private Location location;
@@ -98,13 +95,5 @@ public class Person {
 
     public void setDateJoined(Date dateJoined) {
         this.dateJoined = dateJoined;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
     }
 }
