@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="RESERVATION" directorySegmentName="seg_0" id="2F4C1C76-C178-6EEE-6632-83D98D765E23">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<schemaObject>7B210428-327E-8248-9EAE-1D22E867102F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>11624292-B0F5-44BB-A40E-066E1B9974CB</segment>
+<tableSpace>92D3308D-DA9E-FA25-5CE9-A3D7466878BC</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CUSTOMER_COMMENTS" id="154141B5-F985-1E59-ED32-4E9AC8E1B758">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="END_TIMESTAMP" id="30468636-D059-1DD2-D58B-FB85A6764116">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="START_TIMESTAMP" id="320C6CE5-E54C-FC4D-BF15-D6A1AFCED662">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRICE_QUOTED" id="3A1C5ABA-D688-5C53-F54A-C72EDA3824F7">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AMOUNT_PAID" id="3B1F2840-DC03-1A20-1D6A-42052AC7CDD4">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COUPON_CODE" id="4E0EB765-E7F3-89C8-B134-377BCE8D4BA8">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="4F3BFD8B-960E-5594-A71E-7E434B62B6CA">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_SERVICE_SERVICE_FK" id="62A09C9C-8D30-5610-BA64-7D2A7079F00C">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:53:27 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PERSON_FK" id="65889DA9-F3FA-A48F-DD6D-ED0C7528ECB1">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOCATION_FK" id="9FD9673C-E9EC-3626-5546-801F9C90D33C">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TIP" id="AB952F2E-FB6E-1675-A22D-D3399066F1AB">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_SERVICE_EMPLOYEE_FK" id="C5611753-9796-021A-1527-272AAABE3A0E">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:53:27 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_RESERVATION_PERSON" id="095EA42B-A9E1-0339-7D08-C37AA2F6BC91">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_RESERVATION_LOCATION" id="4E75003F-B117-A409-433A-F11A7C585FA3">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:41 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="RESERVATION_EMPLOYEE_SERVICE_FK" id="78B7433A-982D-A606-B8A3-8BECDCDD1149">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:53:27 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="RESERVATION_PK" id="17A86321-8620-261A-13C1-54932F56051D">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<logging></logging>
+<segment>C4BA5400-EE26-88DF-575A-8BFC0799ABAB</segment>
+<tableSpace>92D3308D-DA9E-FA25-5CE9-A3D7466878BC</tableSpace>
+<indexSegment>C4BA5400-EE26-88DF-575A-8BFC0799ABAB</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+<computeStatistics>YES</computeStatistics>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

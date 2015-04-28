@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C4E6206B-F094-AEC6-A589-956627C0C105" name="FK_RESERVATION_LOCATION">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:41 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>7DF50E70-4203-0E3C-7453-646E1421FC0A</importedID>
+<containerWithKeyObject>2F4C1C76-C178-6EEE-6632-83D98D765E23</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>4E75003F-B117-A409-433A-F11A7C585FA3</localFKIndex>
+<keyObject>7DDDC8A8-9ABE-9B58-09EA-A448159DA700</keyObject>
+<mandatory>false</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

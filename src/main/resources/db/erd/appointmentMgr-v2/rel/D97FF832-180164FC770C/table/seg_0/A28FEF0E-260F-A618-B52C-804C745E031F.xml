@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A28FEF0E-260F-A618-B52C-804C745E031F" name="SERVICE">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>5C076E29-A641-D16E-2352-15ACA1D09940</importedID>
+<schemaObject>7B210428-327E-8248-9EAE-1D22E867102F</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C599B94A-83C1-300E-093B-85F27A4B44B6">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>2457D3AC-B638-67B5-A5F8-8CB2AA5017F3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IS_ACTIVE" id="B5719E2E-79CE-B5C9-D7B0-40C1D07CFEDC">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>FB936815-0EF0-7ABF-DACD-50B2DBCE2D1F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>010C883E-00F5-950C-E671-55E68FC83968</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICE" id="5C662AFE-C67F-8D8D-152D-0AB1902959A9">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>7119B889-2BA1-A0DA-A6F0-B3802E57F7E0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>EF792D06-579A-76C9-1D40-307A28390043</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0D87E51B-4074-F06C-3C09-C0B1D77AF190" name="SERVICE_PK">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>5FE43712-BFC3-E04D-E7D9-EBFC610CD4AE</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C599B94A-83C1-300E-093B-85F27A4B44B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

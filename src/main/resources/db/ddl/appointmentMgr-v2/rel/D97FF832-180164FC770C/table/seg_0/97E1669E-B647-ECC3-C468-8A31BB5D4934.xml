@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="97E1669E-B647-ECC3-C468-8A31BB5D4934" name="SCHEDULE">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>52CD59B2-9AE7-394B-203B-5B07DC086C20</importedID>
+<schemaObject>7B210428-327E-8248-9EAE-1D22E867102F</schemaObject>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DAY_OF_WEEK" id="7B8D7CD2-8F81-8B2B-098C-904AC44C6B5A">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>5F324269-4E58-D1CC-FF4C-3B224B110E52</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLOYEE_ID" id="2CCF521E-323D-4B58-2230-6E9A436704F8">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>B2DF1778-9B35-D468-116E-DDF0171F55A0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>8C473839-9D5E-A052-617C-07F9B91CD98A</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A17446AD-6851-CC54-80A7-CB38AE95BDEF" referredColumn="8C473839-9D5E-A052-617C-07F9B91CD98A"/>
+</associations>
+</Column>
+<Column name="START_AM_HOUR" id="7E79044C-3496-CBCD-1568-6BEFE3E44342">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>76655E07-C3D5-5C86-792E-4804E0466436</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="START_AM_MINUTE" id="9B732060-8576-18D8-8B80-C5CBA8993DE1">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-27 01:03:03 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_AM_HOUR" id="588050C2-F02B-F590-4289-AD4C420A6557">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>367060E3-731A-59DF-8E6D-9BB1A97270CE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_AM_MINUTE" id="7F93D66E-570F-DD25-6C3B-6D3557447B0D">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-27 01:03:42 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="START_PM_HOUR" id="E34E5EA4-F5A4-2754-C8E6-B62AD35C8CCD">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>5B3FF1A2-17F5-CC29-781C-90F4A67293FD</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="START_PM_MINUTE" id="165625B3-A230-B68F-46E9-159B80DFD306">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-27 01:05:04 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_PM_HOUR" id="1F5D84D6-E8BE-0789-A15C-DDFADA77994C">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>FC99D039-8EEC-3D03-D09B-85C02F69909F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_PM_MINUTE" id="CAC05A1B-8C46-6872-F927-56E121DB7613">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-27 01:05:45 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1621457D-63D9-A436-61B0-7315CC89ECE1" name="SCHEDULE_PK">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>31E12918-8A0B-FC41-511F-B69E31BE7DDD</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B8D7CD2-8F81-8B2B-098C-904AC44C6B5A"/>
+<colUsage columnID="2CCF521E-323D-4B58-2230-6E9A436704F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E65D113B-0329-3F11-464F-74F9DDE19EA0" name="FK_SCHEDULE_EMPLOYEE">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CCF521E-323D-4B58-2230-6E9A436704F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

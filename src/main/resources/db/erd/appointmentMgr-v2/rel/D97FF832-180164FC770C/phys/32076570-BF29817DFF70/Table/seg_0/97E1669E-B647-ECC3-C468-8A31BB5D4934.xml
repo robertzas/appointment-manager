@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="SCHEDULE" directorySegmentName="seg_0" id="97E1669E-B647-ECC3-C468-8A31BB5D4934">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<schemaObject>7B210428-327E-8248-9EAE-1D22E867102F</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>11624292-B0F5-44BB-A40E-066E1B9974CB</segment>
+<tableSpace>92D3308D-DA9E-FA25-5CE9-A3D7466878BC</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="END_PM" id="1F5D84D6-E8BE-0789-A15C-DDFADA77994C">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_FK" id="2CCF521E-323D-4B58-2230-6E9A436704F8">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="END_AM" id="588050C2-F02B-F590-4289-AD4C420A6557">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DAY_OF_WEEK" id="7B8D7CD2-8F81-8B2B-098C-904AC44C6B5A">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="START_AM" id="7E79044C-3496-CBCD-1568-6BEFE3E44342">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="START_PM" id="E34E5EA4-F5A4-2754-C8E6-B62AD35C8CCD">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_SCHEDULE_EMPLOYEE" id="E65D113B-0329-3F11-464F-74F9DDE19EA0">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="SCHEDULE_PK" id="1621457D-63D9-A436-61B0-7315CC89ECE1">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<logging></logging>
+<segment>C4BA5400-EE26-88DF-575A-8BFC0799ABAB</segment>
+<tableSpace>92D3308D-DA9E-FA25-5CE9-A3D7466878BC</tableSpace>
+<indexSegment>C4BA5400-EE26-88DF-575A-8BFC0799ABAB</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+<computeStatistics>YES</computeStatistics>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

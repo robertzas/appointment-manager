@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A7E66B70-9D7A-847E-1761-FD6BC7F1CDCF" name="CANCELLATION">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:06:09 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RESERVATION_ID" id="67E508BD-7065-43F8-19F6-16074F83EB35">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:07:06 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>4F3BFD8B-960E-5594-A71E-7E434B62B6CA</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83EDD1FE-C18A-17AA-8EBD-63E6B7E6682D" referredColumn="4F3BFD8B-960E-5594-A71E-7E434B62B6CA"/>
+</associations>
+</Column>
+<Column name="REASON" id="AAB96727-2315-C3EA-1954-75B7BDF4C8A7">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:07:06 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANCELLED_BY_ID" id="6CF8C453-8491-0899-C81C-D6E3B432F5B1">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:09:27 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>71E5E31C-F6F3-04E5-23DF-1DAA2CA990E5</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1DB1033-B2AE-2DD3-5BFC-E51B38D8B6B4" referredColumn="71E5E31C-F6F3-04E5-23DF-1DAA2CA990E5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1C1B9C49-5B9A-8BB7-FF4D-6DAC5BA04D36" name="CANCELLATION_PK">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:07:28 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67E508BD-7065-43F8-19F6-16074F83EB35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A8CBE1C-A489-CBA2-B23B-9EDD5525E153" name="CANCELLATION_RESERVATION_FK">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:07:56 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67E508BD-7065-43F8-19F6-16074F83EB35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="442DE768-418A-493F-452D-439A9715FDD7" name="CANCELLATION_PERSON_FK">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:09:27 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CF8C453-8491-0899-C81C-D6E3B432F5B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

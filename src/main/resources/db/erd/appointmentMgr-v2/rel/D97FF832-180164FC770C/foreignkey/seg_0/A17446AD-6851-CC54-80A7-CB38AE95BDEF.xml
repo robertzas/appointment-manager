@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A17446AD-6851-CC54-80A7-CB38AE95BDEF" name="FK_SCHEDULE_EMPLOYEE">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-v2</ownerDesignName>
+<importedID>8C7128F9-1128-EEBB-6E6A-B52E59166A06</importedID>
+<containerWithKeyObject>97E1669E-B647-ECC3-C468-8A31BB5D4934</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>E65D113B-0329-3F11-464F-74F9DDE19EA0</localFKIndex>
+<keyObject>03739768-F3B8-C201-0BB3-3739AD092A66</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
