@@ -2,20 +2,37 @@
     padding: 5%;
 }
 .br-fullpage-nav{
-    display: none;
-}
-.navbar-fixed-top{
-    list-style-type: none;
-    position: fixed;
-    left: 1%;
-    top: 1%;
-    display: inline;
-    z-index: 2;
-    font-size: 50px;
-    padding: 3%
+    display:none;
 }
 .jumbotron{
     max-height: 95%;
-    overflow: hidden;
+    overflow: show;
 }
-
+.dropdown-menu h2 {
+    padding: 14px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+.dropdown-menu {
+    width: 200px;
+}
+.dropdown-menu .form-group {
+    margin: 30px 0;
+}
+.appt-buttons{
+    position:fixed;
+    left:10px;
+    list-style-type:none;
+    top:25%;
+    display:inline-block;
+    z-index:2
+}
+.appt-buttons li{
+    margin:5px
+}
+.appt-calander {
+    display:inline-block;
+    min-height:290px;
+    align-content:right;
+}

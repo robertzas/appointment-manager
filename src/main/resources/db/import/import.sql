@@ -1,112 +1,111 @@
 
-insert into location (name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
-values ('abc hair studio', '300 walnut st', '201', 'boulder', 'CO', '80002',null);
+insert into location (id, name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
+values (1, 'abc hair studio', '300 walnut st', '201', 'boulder', 'CO', '80002',123);
 
-insert into location (name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
-values ('xyz nail studio', '400 walnut st', '101', 'boulder', 'CO', '80002',null);
+insert into location (id, name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
+values (2, 'xyz nail studio', '400 walnut st', '101', 'boulder', 'CO', '80002',234);
 
-insert into location (name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
-values ('Hair designs', '4000 simpson st', '101', 'boulder', 'CO', '80002',null);
+insert into location (id, name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
+values (3, 'Hair designs', '4000 simpson st', '101', 'boulder', 'CO', '80002',345);
 
-insert into location (name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
-values ('Sally''s Salon', '7200 gregory st', 'suite 5', 'georgetown', 'CO', '80005',null);
+insert into location (id, name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
+values (4, 'Sally''s Salon', '7200 gregory st', 'suite 5', 'georgetown', 'CO', '80005',456);
 
-insert into location (name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
-values ('Nails R Us', '4300 walker st', 'suite 1', 'golden', 'CO', '80100',null);
+insert into location (id, name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
+values (5, 'Nails R Us', '4300 walker st', 'suite 1', 'golden', 'CO', '80100',567);
 
-insert into location (name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
-values ('All about U', '2033 starlight st', 'suite 33', 'denver', 'CO', '80023',null);
+insert into location (id, name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
+values (6, 'All about U', '2033 starlight st', 'suite 33', 'denver', 'CO', '80023',678);
 
-insert into location (name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
-values ('Fantastik Sam''s', '204 pitkin st', 'suite 10', 'georgetown', 'CO', '80005',null);
+insert into location (id, name, address_line1, address_line2, city, state_code, zip_code, geolocation_dms)
+values (7, 'Fantastik Sam''s', '204 pitkin st', 'suite 10', 'georgetown', 'CO', '80005',789);
 
 
 --load service--
 
-insert into service (service_name, is_active)
-values ('hair cut', 'Y');
+insert into service (id, service_name, is_active)
+values (1,'hair cut', 'Y');
   
-insert into service (service_name, is_active)
-values ('hair shampoo/blowdry', 'Y');
+insert into service (id, service_name, is_active)
+values (2,'hair shampoo/blowdry', 'Y');
   
-insert into service (service_name, is_active)
-values ('full highlights', 'Y');
+insert into service (id, service_name, is_active)
+values (3,'full highlights', 'Y');
   
-insert into service (service_name, is_active)
-values ('partial highlights', 'Y');
+insert into service (id, service_name, is_active)
+values (4,'partial highlights', 'Y');
   
-insert into service (service_name, is_active)
-values ('bang cut', 'Y');
+insert into service (id, service_name, is_active)
+values (5,'bang cut', 'Y');
   
-insert into service (service_name, is_active)
-values ('spa manicure', 'Y');
+insert into service (id, service_name, is_active)
+values (6,'spa manicure', 'Y');
   
-insert into service (service_name, is_active)
-values ('spa pedicure', 'Y');
+insert into service (id, service_name, is_active)
+values (7,'spa pedicure', 'Y');
   
-insert into service (service_name, is_active)
-values ('foot massage', 'Y');
+insert into service (id, service_name, is_active)
+values (8,'foot massage', 'Y');
   
-insert into service (service_name, is_active)
-values ('special occasion styling', 'Y');
+insert into service (id, service_name, is_active)
+values (9,'special occasion styling', 'Y');
   
-insert into service (service_name, is_active)
-values ('nail polish change', 'Y');
+insert into service (id, service_name, is_active)
+values (10,'nail polish change', 'Y');
   
-insert into service (service_name, is_active)
-values ('nail designs', 'Y');
+insert into service (id, service_name, is_active)
+values (11,'nail designs', 'Y');
   
-insert into service (service_name, is_active)
-values ('time off', 'Y');
+insert into service (id, service_name, is_active)
+values (12,'time off', 'Y');
 
-  
   
   --load employees ---
 
 
-insert into employee (first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
-values ('Sally', 'Jones', 'saljones@me.com', '3032221111','100', 'sjones', 'encryptme', sysdate, 'Y');
+insert into employee (id, first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
+values (1, 'Sally', 'Jones', 'saljones@me.com', '3032221111','100', 'sjones', 'encryptme', sysdate, 'Y');
     
-insert into employee (first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
-values ('Samantha', 'Smith', 'samsmith@me.com', '3032221122','100', 'ssmith', 'encryptme', sysdate, 'Y');
+insert into employee (id, first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
+values (2, 'Samantha', 'Smith', 'samsmith@me.com', '3032221122','100', 'ssmith', 'encryptme', sysdate, 'Y');
 
-insert into employee (first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
-values ('Jill', 'Simpson', 'jsimpson@me.com', '3032221122','100', 'jsimpson', 'encryptme', sysdate, 'Y');
+insert into employee (id, first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
+values (3, 'Jill', 'Simpson', 'jsimpson@me.com', '3032221122','100', 'jsimpson', 'encryptme', sysdate, 'Y');
     
-insert into employee (first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
-values ('Tim', 'Jacobs', 'tj@me.com', '303222311','200', 'tjacobs', 'encryptme', sysdate, 'Y');
+insert into employee (id, first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
+values (4, 'Tim', 'Jacobs', 'tj@me.com', '303222311','200', 'tjacobs', 'encryptme', sysdate, 'Y');
     
-insert into employee (first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
-values ('Darcey', 'Doe', 'ddoe@me.com', '3032221121','300', 'ddoe', 'encryptme', sysdate, 'Y');
+insert into employee (id, first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
+values (5, 'Darcey', 'Doe', 'ddoe@me.com', '3032221121','300', 'ddoe', 'encryptme', sysdate, 'Y');
 
-insert into employee (first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
-values ('Olga', 'Brown', 'obrown@me.com', '3032223322','400', 'obrown', 'encryptme', sysdate, 'Y');
+insert into employee (id, first_name, last_name, email_address, phone_number, location_id, username, password, date_joined, allows_discounts)
+values (6, 'Olga', 'Brown', 'obrown@me.com', '3032223322','400', 'obrown', 'encryptme', sysdate, 'Y');
 
-   --load employees ---
+   --load Cost ---
 
-insert into service_employee  (service_id, time_required, cost)
-values ('10', 45, 35.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (1, 45, 35.00);
 
-insert into service_employee  (service_id, time_required, cost)
-values ('15', 30, 35.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (2, 30, 35.00);
 
-insert into service_employee  (service_id, time_required, cost)
-values ('20', 120, 110.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (3, 120, 110.00);
 
-insert into service_employee  (service_id, time_required, cost)
-values ('25', 90, 85.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (4, 90, 85.00);
 
-insert into service_employee  (service_id, time_required, cost)
-values ('10', 45, 35.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (5, 45, 35.00);
 
-insert into service_employee  (service_id, time_required, cost)
-values ('15', 30, 35.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (6, 30, 35.00);
 
-insert into service_employee  (service_id, time_required, cost)
-values ('20', 110, 110.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (7, 110, 110.00);
 
-insert into service_employee  (service_id, time_required, cost)
-values ('25', 80, 85.00);
+insert into service_employee  (id, time_required, cost, employee_fk, service_fk)
+values (8, 80, 85.00);
 
 
 
