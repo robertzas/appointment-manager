@@ -208,11 +208,11 @@ commit;
 --insert into day_of_week (name, description)
 --values ('MON', 'Monday');
 --insert into day_of_week (name, description)
---values ('TUES', 'Tuesday');
+--values ('TUE', 'Tuesday');
 --insert into day_of_week (name, description)
 --values ('WED', 'Wednesday');
 --insert into day_of_week (name, description)
---values ('THUR', 'Thursday');
+--values ('THU', 'Thursday');
 --insert into day_of_week (name, description)
 --values ('FRI', 'Friday');
 --insert into day_of_week (name, description)

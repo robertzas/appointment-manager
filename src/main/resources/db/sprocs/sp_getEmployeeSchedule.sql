@@ -11,10 +11,11 @@ create or replace PROCEDURE getEmployeeSchedule (employee_id IN NUMBER, requestD
      
    BEGIN
      if (requestDate is null ) then 
-       select (sysdate +1) into wantedDate from dual;
+       select (sysdate + 1) into wantedDate from dual;
      end if;
      
      select to_char(wantedDate, 'DY') into dayofweek from dual;
+     DBMS_OUTPUT.PUT_LINE('dayofweek ' || dayofweek);
      
      if morning = 1 then
         SELECT start_am_hour, start_am_minute, end_am_hour, end_am_minute
