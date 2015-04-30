@@ -1,199 +1,198 @@
-package model;
+package com.team404.appointment.domain;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
 
 
 /**
  * The persistent class for the PERSON database table.
- * 
  */
 @Entity
-@NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
+@Table(name = "person")
 public class Person implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@Column(name="DATE_JOINED")
-	private Timestamp dateJoined;
+    @Column(name = "date_joined")
+    private Timestamp dateJoined;
 
-	@Column(name="EMAIL_ADDRESS")
-	private String emailAddress;
+    @Column(name = "email_address")
+    private String emailAddress;
 
-	@Column(name="FIRST_NAME")
-	private String firstName;
+    @Column(name = "first_name")
+    private String firstName;
 
-	@Column(name="LAST_NAME")
-	private String lastName;
+    @Column(name = "last_name")
+    private String lastName;
 
-	private String password;
+    private String password;
 
-	@Column(name="PHONE_NUMBER")
-	private String phoneNumber;
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
-	private String username;
+    private String username;
 
-	//bi-directional many-to-one association to Cancellation
-	@OneToMany(mappedBy="person")
-	private List<Cancellation> cancellations;
+    //bi-directional many-to-one association to Cancellation
+    @OneToMany(mappedBy = "person")
+    private List<Cancellation> cancellations;
 
-	//bi-directional many-to-one association to Employee
-	@OneToMany(mappedBy="person")
-	private List<Employee> employees;
+    //bi-directional many-to-one association to Employee
+    @OneToMany(mappedBy = "person")
+    private List<Employee> employees;
 
-	//bi-directional many-to-one association to Location
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="PREFERRED_LOCATION_ID")
-	private Location location;
+    //bi-directional many-to-one association to Location
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "PREFERRED_LOCATION_ID")
+    private Location location;
 
-	//bi-directional many-to-one association to Reservation
-	@OneToMany(mappedBy="person")
-	private List<Reservation> reservations;
+    //bi-directional many-to-one association to Reservation
+    @OneToMany(mappedBy = "person")
+    private List<Reservation> reservations;
 
-	public Person() {
-	}
+    public Person() {
+    }
 
-	public long getId() {
-		return this.id;
-	}
+    public long getId() {
+        return this.id;
+    }
 
-	public void setId(long id) {
-		this.id = id;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public Timestamp getDateJoined() {
-		return this.dateJoined;
-	}
+    public Timestamp getDateJoined() {
+        return this.dateJoined;
+    }
 
-	public void setDateJoined(Timestamp dateJoined) {
-		this.dateJoined = dateJoined;
-	}
+    public void setDateJoined(Timestamp dateJoined) {
+        this.dateJoined = dateJoined;
+    }
 
-	public String getEmailAddress() {
-		return this.emailAddress;
-	}
+    public String getEmailAddress() {
+        return this.emailAddress;
+    }
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
-	}
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
 
-	public String getFirstName() {
-		return this.firstName;
-	}
+    public String getFirstName() {
+        return this.firstName;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getLastName() {
-		return this.lastName;
-	}
+    public String getLastName() {
+        return this.lastName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public String getPassword() {
-		return this.password;
-	}
+    public String getPassword() {
+        return this.password;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public String getPhoneNumber() {
-		return this.phoneNumber;
-	}
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-	public String getUsername() {
-		return this.username;
-	}
+    public String getUsername() {
+        return this.username;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public List<Cancellation> getCancellations() {
-		return this.cancellations;
-	}
+    public List<Cancellation> getCancellations() {
+        return this.cancellations;
+    }
 
-	public void setCancellations(List<Cancellation> cancellations) {
-		this.cancellations = cancellations;
-	}
+    public void setCancellations(List<Cancellation> cancellations) {
+        this.cancellations = cancellations;
+    }
 
-	public Cancellation addCancellation(Cancellation cancellation) {
-		getCancellations().add(cancellation);
-		cancellation.setPerson(this);
+    public Cancellation addCancellation(Cancellation cancellation) {
+        getCancellations().add(cancellation);
+        cancellation.setPerson(this);
 
-		return cancellation;
-	}
+        return cancellation;
+    }
 
-	public Cancellation removeCancellation(Cancellation cancellation) {
-		getCancellations().remove(cancellation);
-		cancellation.setPerson(null);
+    public Cancellation removeCancellation(Cancellation cancellation) {
+        getCancellations().remove(cancellation);
+        cancellation.setPerson(null);
 
-		return cancellation;
-	}
+        return cancellation;
+    }
 
-	public List<Employee> getEmployees() {
-		return this.employees;
-	}
+    public List<Employee> getEmployees() {
+        return this.employees;
+    }
 
-	public void setEmployees(List<Employee> employees) {
-		this.employees = employees;
-	}
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 
-	public Employee addEmployee(Employee employee) {
-		getEmployees().add(employee);
-		employee.setPerson(this);
+    public Employee addEmployee(Employee employee) {
+        getEmployees().add(employee);
+        employee.setPerson(this);
 
-		return employee;
-	}
+        return employee;
+    }
 
-	public Employee removeEmployee(Employee employee) {
-		getEmployees().remove(employee);
-		employee.setPerson(null);
+    public Employee removeEmployee(Employee employee) {
+        getEmployees().remove(employee);
+        employee.setPerson(null);
 
-		return employee;
-	}
+        return employee;
+    }
 
-	public Location getLocation() {
-		return this.location;
-	}
+    public Location getLocation() {
+        return this.location;
+    }
 
-	public void setLocation(Location location) {
-		this.location = location;
-	}
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 
-	public List<Reservation> getReservations() {
-		return this.reservations;
-	}
+    public List<Reservation> getReservations() {
+        return this.reservations;
+    }
 
-	public void setReservations(List<Reservation> reservations) {
-		this.reservations = reservations;
-	}
+    public void setReservations(List<Reservation> reservations) {
+        this.reservations = reservations;
+    }
 
-	public Reservation addReservation(Reservation reservation) {
-		getReservations().add(reservation);
-		reservation.setPerson(this);
+    public Reservation addReservation(Reservation reservation) {
+        getReservations().add(reservation);
+        reservation.setPerson(this);
 
-		return reservation;
-	}
+        return reservation;
+    }
 
-	public Reservation removeReservation(Reservation reservation) {
-		getReservations().remove(reservation);
-		reservation.setPerson(null);
+    public Reservation removeReservation(Reservation reservation) {
+        getReservations().remove(reservation);
+        reservation.setPerson(null);
 
-		return reservation;
-	}
+        return reservation;
+    }
 
 }
