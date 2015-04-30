@@ -1,99 +1,199 @@
-package com.team404.appointment.domain;
+package model;
 
+import java.io.Serializable;
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Timestamp;
+import java.util.List;
 
+
+/**
+ * The persistent class for the PERSON database table.
+ * 
+ */
 @Entity
-public class Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @Column(name = "first_name")
-    private String firstName;
-    @Column(name = "last_name")
-    private String lastName;
-    @Column(name = "email_address")
-    private String emailAddress;
-    private String password;
-    @Column(name = "phone_number")
-    private int phoneNumber;
-    private String role;
-    @Column(name = "date_joined")
-    private Date dateJoined;
+@NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
+public class Person implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "location_fk")
-    private Location location;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
 
-    public Location getLocation() {
-        return location;
-    }
+	@Column(name="DATE_JOINED")
+	private Timestamp dateJoined;
 
-    public void setLocation(Location location) {
-        this.location = location;
-    }
+	@Column(name="EMAIL_ADDRESS")
+	private String emailAddress;
 
-    public long getId() {
-        return id;
-    }
+	@Column(name="FIRST_NAME")
+	private String firstName;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	@Column(name="LAST_NAME")
+	private String lastName;
 
-    public String getFirstName() {
-        return firstName;
-    }
+	private String password;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	@Column(name="PHONE_NUMBER")
+	private String phoneNumber;
 
-    public String getLastName() {
-        return lastName;
-    }
+	private String username;
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	//bi-directional many-to-one association to Cancellation
+	@OneToMany(mappedBy="person")
+	private List<Cancellation> cancellations;
 
-    public String getEmailAddress() {
-        return emailAddress;
-    }
+	//bi-directional many-to-one association to Employee
+	@OneToMany(mappedBy="person")
+	private List<Employee> employees;
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
+	//bi-directional many-to-one association to Location
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="PREFERRED_LOCATION_ID")
+	private Location location;
 
-    public String getPassword() {
-        return password;
-    }
+	//bi-directional many-to-one association to Reservation
+	@OneToMany(mappedBy="person")
+	private List<Reservation> reservations;
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public Person() {
+	}
 
-    public int getPhoneNumber() {
-        return phoneNumber;
-    }
+	public long getId() {
+		return this.id;
+	}
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public String getRole() {
-        return role;
-    }
+	public Timestamp getDateJoined() {
+		return this.dateJoined;
+	}
 
-    public void setRole(String role) {
-        this.role = role;
-    }
+	public void setDateJoined(Timestamp dateJoined) {
+		this.dateJoined = dateJoined;
+	}
 
-    public Date getDateJoined() {
-        return dateJoined;
-    }
+	public String getEmailAddress() {
+		return this.emailAddress;
+	}
 
-    public void setDateJoined(Date dateJoined) {
-        this.dateJoined = dateJoined;
-    }
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public String getFirstName() {
+		return this.firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return this.lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getPhoneNumber() {
+		return this.phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getUsername() {
+		return this.username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public List<Cancellation> getCancellations() {
+		return this.cancellations;
+	}
+
+	public void setCancellations(List<Cancellation> cancellations) {
+		this.cancellations = cancellations;
+	}
+
+	public Cancellation addCancellation(Cancellation cancellation) {
+		getCancellations().add(cancellation);
+		cancellation.setPerson(this);
+
+		return cancellation;
+	}
+
+	public Cancellation removeCancellation(Cancellation cancellation) {
+		getCancellations().remove(cancellation);
+		cancellation.setPerson(null);
+
+		return cancellation;
+	}
+
+	public List<Employee> getEmployees() {
+		return this.employees;
+	}
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
+
+	public Employee addEmployee(Employee employee) {
+		getEmployees().add(employee);
+		employee.setPerson(this);
+
+		return employee;
+	}
+
+	public Employee removeEmployee(Employee employee) {
+		getEmployees().remove(employee);
+		employee.setPerson(null);
+
+		return employee;
+	}
+
+	public Location getLocation() {
+		return this.location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+	public List<Reservation> getReservations() {
+		return this.reservations;
+	}
+
+	public void setReservations(List<Reservation> reservations) {
+		this.reservations = reservations;
+	}
+
+	public Reservation addReservation(Reservation reservation) {
+		getReservations().add(reservation);
+		reservation.setPerson(this);
+
+		return reservation;
+	}
+
+	public Reservation removeReservation(Reservation reservation) {
+		getReservations().remove(reservation);
+		reservation.setPerson(null);
+
+		return reservation;
+	}
+
 }

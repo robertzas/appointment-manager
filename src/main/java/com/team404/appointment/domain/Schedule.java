@@ -1,70 +1,131 @@
-package com.team404.appointment.domain;
+package model;
 
+import java.io.Serializable;
 import javax.persistence.*;
-import java.util.Date;
 
+
+/**
+ * The persistent class for the "SCHEDULE" database table.
+ * 
+ */
 @Entity
-public class Schedule {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @Column(name = "start_am")
-    private Date startAm;
-    @Column(name = "end_am")
-    private Date endAm;
-    @Column(name = "start_pm")
-    private Date startPm;
-    @Column(name = "end_pm")
-    private Date endPm;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "employee_fk")
-    private Employee employee;
+@Table(name="\"SCHEDULE\"")
+@NamedQuery(name="Schedule.findAll", query="SELECT s FROM Schedule s")
+public class Schedule implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    public Employee getEmployee() {
-        return employee;
-    }
+	@EmbeddedId
+	private SchedulePK id;
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+	@Column(name="END_AM_HOUR")
+	private String endAmHour;
 
-    public long getId() {
-        return id;
-    }
+	@Column(name="END_AM_MINUTE")
+	private String endAmMinute;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	@Column(name="END_PM_HOUR")
+	private String endPmHour;
 
-    public Date getStartAm() {
-        return startAm;
-    }
+	@Column(name="END_PM_MINUTE")
+	private String endPmMinute;
 
-    public void setStartAm(Date startAm) {
-        this.startAm = startAm;
-    }
+	@Column(name="START_AM_HOUR")
+	private String startAmHour;
 
-    public Date getEndAm() {
-        return endAm;
-    }
+	@Column(name="START_AM_MINUTE")
+	private String startAmMinute;
 
-    public void setEndAm(Date endAm) {
-        this.endAm = endAm;
-    }
+	@Column(name="START_PM_HOUR")
+	private String startPmHour;
 
-    public Date getStartPm() {
-        return startPm;
-    }
+	@Column(name="START_PM_MINUTE")
+	private String startPmMinute;
 
-    public void setStartPm(Date startPm) {
-        this.startPm = startPm;
-    }
+	//bi-directional many-to-one association to Employee
+	@ManyToOne(fetch=FetchType.LAZY)
+	private Employee employee;
 
-    public Date getEndPm() {
-        return endPm;
-    }
+	public Schedule() {
+	}
 
-    public void setEndPm(Date endPm) {
-        this.endPm = endPm;
-    }
+	public SchedulePK getId() {
+		return this.id;
+	}
+
+	public void setId(SchedulePK id) {
+		this.id = id;
+	}
+
+	public String getEndAmHour() {
+		return this.endAmHour;
+	}
+
+	public void setEndAmHour(String endAmHour) {
+		this.endAmHour = endAmHour;
+	}
+
+	public String getEndAmMinute() {
+		return this.endAmMinute;
+	}
+
+	public void setEndAmMinute(String endAmMinute) {
+		this.endAmMinute = endAmMinute;
+	}
+
+	public String getEndPmHour() {
+		return this.endPmHour;
+	}
+
+	public void setEndPmHour(String endPmHour) {
+		this.endPmHour = endPmHour;
+	}
+
+	public String getEndPmMinute() {
+		return this.endPmMinute;
+	}
+
+	public void setEndPmMinute(String endPmMinute) {
+		this.endPmMinute = endPmMinute;
+	}
+
+	public String getStartAmHour() {
+		return this.startAmHour;
+	}
+
+	public void setStartAmHour(String startAmHour) {
+		this.startAmHour = startAmHour;
+	}
+
+	public String getStartAmMinute() {
+		return this.startAmMinute;
+	}
+
+	public void setStartAmMinute(String startAmMinute) {
+		this.startAmMinute = startAmMinute;
+	}
+
+	public String getStartPmHour() {
+		return this.startPmHour;
+	}
+
+	public void setStartPmHour(String startPmHour) {
+		this.startPmHour = startPmHour;
+	}
+
+	public String getStartPmMinute() {
+		return this.startPmMinute;
+	}
+
+	public void setStartPmMinute(String startPmMinute) {
+		this.startPmMinute = startPmMinute;
+	}
+
+	public Employee getEmployee() {
+		return this.employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
 }

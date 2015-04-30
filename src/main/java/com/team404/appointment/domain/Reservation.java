@@ -1,125 +1,163 @@
-package com.team404.appointment.domain;
+package model;
 
+import java.io.Serializable;
 import javax.persistence.*;
-import java.util.Date;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
+
+/**
+ * The persistent class for the RESERVATION database table.
+ * 
+ */
 @Entity
-public class Reservation {
+@NamedQuery(name="Reservation.findAll", query="SELECT r FROM Reservation r")
+public class Reservation implements Serializable {
+	private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    @Column(name = "start_timestamp")
-    private Date startDate;
-    @Column(name = "end_timestamp")
-    private Date endDate;
-    @Column(name = "price_quoted")
-    private long priceQuoted;
-    @Column(name = "customer_comments")
-    private String comments;
-    @Column(name = "amount_paid")
-    private long amountPaid;
-    @Column(name = "coupon_code")
-    private String couponCode;
-    private String tip;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "location_fk")
-    private Location location;
+	@Column(name="AMOUNT_PAID")
+	private BigDecimal amountPaid;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_fk")
-    private Employee employee;
+	@Column(name="COUPON_CODE")
+	private String couponCode;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "person_fk")
-    private Person person;
+	@Column(name="CUSTOMER_COMMENTS")
+	private String customerComments;
 
-    public Employee getEmployee() {
-        return employee;
-    }
+	@Column(name="END_TIMESTAMP")
+	private Timestamp endTimestamp;
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+	@Column(name="PRICE_QUOTED")
+	private BigDecimal priceQuoted;
 
-    public Person getPerson() {
-        return person;
-    }
+	@Column(name="START_TIMESTAMP")
+	private Timestamp startTimestamp;
 
-    public void setPerson(Person person) {
-        this.person = person;
-    }
+	private BigDecimal tip;
 
-    public Location getLocation() {
-        return location;
-    }
+	//bi-directional one-to-one association to Cancellation
+	@OneToOne(mappedBy="reservation", fetch=FetchType.LAZY)
+	private Cancellation cancellation;
 
-    public void setLocation(Location location) {
-        this.location = location;
-    }
+	//bi-directional many-to-one association to Location
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="LOCATION_FK")
+	private Location location;
 
-    public long getId() {
-        return id;
-    }
+	//bi-directional many-to-one association to Person
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="PERSON_FK")
+	private Person person;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	//bi-directional many-to-one association to EmployeeService
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumns({
+		@JoinColumn(name="EMPLOYEE_SERVICE_EMPLOYEE_FK", referencedColumnName="EMPLOYEE_ID"),
+		@JoinColumn(name="EMPLOYEE_SERVICE_SERVICE_FK", referencedColumnName="SERVICE_ID")
+		})
+	private EmployeeService employeeService;
 
-    public Date getStartDate() {
-        return startDate;
-    }
+	public Reservation() {
+	}
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
+	public long getId() {
+		return this.id;
+	}
 
-    public Date getEndDate() {
-        return endDate;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
+	public BigDecimal getAmountPaid() {
+		return this.amountPaid;
+	}
 
-    public long getPriceQuoted() {
-        return priceQuoted;
-    }
+	public void setAmountPaid(BigDecimal amountPaid) {
+		this.amountPaid = amountPaid;
+	}
 
-    public void setPriceQuoted(long priceQuoted) {
-        this.priceQuoted = priceQuoted;
-    }
+	public String getCouponCode() {
+		return this.couponCode;
+	}
 
-    public String getComments() {
-        return comments;
-    }
+	public void setCouponCode(String couponCode) {
+		this.couponCode = couponCode;
+	}
 
-    public void setComments(String comments) {
-        this.comments = comments;
-    }
+	public String getCustomerComments() {
+		return this.customerComments;
+	}
 
-    public long getAmountPaid() {
-        return amountPaid;
-    }
+	public void setCustomerComments(String customerComments) {
+		this.customerComments = customerComments;
+	}
 
-    public void setAmountPaid(long amountPaid) {
-        this.amountPaid = amountPaid;
-    }
+	public Timestamp getEndTimestamp() {
+		return this.endTimestamp;
+	}
 
-    public String getCouponCode() {
-        return couponCode;
-    }
+	public void setEndTimestamp(Timestamp endTimestamp) {
+		this.endTimestamp = endTimestamp;
+	}
 
-    public void setCouponCode(String couponCode) {
-        this.couponCode = couponCode;
-    }
+	public BigDecimal getPriceQuoted() {
+		return this.priceQuoted;
+	}
 
-    public String getTip() {
-        return tip;
-    }
+	public void setPriceQuoted(BigDecimal priceQuoted) {
+		this.priceQuoted = priceQuoted;
+	}
 
-    public void setTip(String tip) {
-        this.tip = tip;
-    }
+	public Timestamp getStartTimestamp() {
+		return this.startTimestamp;
+	}
+
+	public void setStartTimestamp(Timestamp startTimestamp) {
+		this.startTimestamp = startTimestamp;
+	}
+
+	public BigDecimal getTip() {
+		return this.tip;
+	}
+
+	public void setTip(BigDecimal tip) {
+		this.tip = tip;
+	}
+
+	public Cancellation getCancellation() {
+		return this.cancellation;
+	}
+
+	public void setCancellation(Cancellation cancellation) {
+		this.cancellation = cancellation;
+	}
+
+	public Location getLocation() {
+		return this.location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+	public Person getPerson() {
+		return this.person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	public EmployeeService getEmployeeService() {
+		return this.employeeService;
+	}
+
+	public void setEmployeeService(EmployeeService employeeService) {
+		this.employeeService = employeeService;
+	}
+
 }
