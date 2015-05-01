@@ -1,10 +1,10 @@
 package com.team404.appointment.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-/**
- * The persistent class for the "SCHEDULE" database table.
- */
 @Entity
 @Table(name = "schedule")
 public class Schedule {
@@ -35,10 +35,6 @@ public class Schedule {
 
     @Column(name = "start_pm_minute")
     private String startPmMinute;
-
-    //bi-directional many-to-one association to Employee
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Employee employee;
 
     public Schedule() {
     }
@@ -115,12 +111,5 @@ public class Schedule {
         this.startPmMinute = startPmMinute;
     }
 
-    public Employee getEmployee() {
-        return this.employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
 
 }

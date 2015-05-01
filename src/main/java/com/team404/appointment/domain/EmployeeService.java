@@ -4,10 +4,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-
-/**
- * The persistent class for the EMPLOYEE_SERVICE database table.
- */
 @Entity
 @Table(name = "employee_service")
 public class EmployeeService {

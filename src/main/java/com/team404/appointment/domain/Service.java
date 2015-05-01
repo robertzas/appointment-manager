@@ -19,7 +19,7 @@ public class Service {
     @Column(name = "is_active")
     private BigDecimal isActive;
 
-    @Column(name = "\"service\"")
+    @Column(name = "service")
     private String service;
 
     //bi-directional many-to-one association to EmployeeService

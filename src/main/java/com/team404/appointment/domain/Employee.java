@@ -5,15 +5,13 @@ import java.math.BigDecimal;
 import java.util.List;
 
 
-/**
- * The persistent class for the EMPLOYEE database table.
- */
 @Entity
 @Table(name = "employee")
 public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "schedule_pk")
     private long id;
 
     @Column(name = "allows_coupons")
@@ -23,7 +21,7 @@ public class Employee {
     private BigDecimal isAdmin;
 
     //bi-directional many-to-one association to Person
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     private Person person;
 
     //bi-directional many-to-one association to EmployeeService
@@ -31,7 +29,7 @@ public class Employee {
     private List<EmployeeService> employeeServices;
 
     //bi-directional many-to-one association to Schedule
-    @OneToMany(mappedBy = "employee")
+    @OneToMany(mappedBy = "schedule_pk")
     private List<Schedule> schedules;
 
     public Employee() {
@@ -101,14 +99,12 @@ public class Employee {
 
     public Schedule addSchedule(Schedule schedule) {
         getSchedules().add(schedule);
-        schedule.setEmployee(this);
 
         return schedule;
     }
 
     public Schedule removeSchedule(Schedule schedule) {
         getSchedules().remove(schedule);
-        schedule.setEmployee(null);
 
         return schedule;
     }

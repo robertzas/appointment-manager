@@ -3,9 +3,6 @@ package com.team404.appointment.domain;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-/**
- * The primary key class for the EMPLOYEE_SERVICE database table.
- */
 @Embeddable
 public class EmployeeServicePK {
 
