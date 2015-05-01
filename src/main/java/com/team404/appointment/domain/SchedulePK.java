@@ -1,7 +1,6 @@
 package com.team404.appointment.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
 /**
  * The primary key class for the "SCHEDULE" database table.
@@ -12,11 +11,8 @@ public class SchedulePK {
     @Column(name = "day_of_week")
     private String dayOfWeek;
 
-    @Column(name = "employee_id", insertable = false, updatable = false)
-    private long employeeId;
-
-    public SchedulePK() {
-    }
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Employee.class, cascade = CascadeType.REMOVE)
+    private Employee employee;
 
     public String getDayOfWeek() {
         return this.dayOfWeek;
@@ -26,12 +22,12 @@ public class SchedulePK {
         this.dayOfWeek = dayOfWeek;
     }
 
-    public long getEmployeeId() {
-        return this.employeeId;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setEmployeeId(long employeeId) {
-        this.employeeId = employeeId;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public boolean equals(Object other) {
@@ -44,14 +40,14 @@ public class SchedulePK {
         SchedulePK castOther = (SchedulePK) other;
         return
                 this.dayOfWeek.equals(castOther.dayOfWeek)
-                        && (this.employeeId == castOther.employeeId);
+                        && (this.employee.getId() == castOther.employee.getId());
     }
 
     public int hashCode() {
         final int prime = 31;
         int hash = 17;
         hash = hash * prime + this.dayOfWeek.hashCode();
-        hash = hash * prime + ((int) (this.employeeId ^ (this.employeeId >>> 32)));
+        hash = hash * prime + ((int) (this.employee.getId() ^ (this.employee.getId() >>> 32)));
 
         return hash;
     }
