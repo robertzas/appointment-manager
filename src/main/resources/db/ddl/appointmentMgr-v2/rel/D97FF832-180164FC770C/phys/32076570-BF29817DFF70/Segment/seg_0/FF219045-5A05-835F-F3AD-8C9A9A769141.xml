@@ -1,9 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<SegmentOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SegmentOraclev10g" name="Storage1" directorySegmentName="seg_0" id="FF219045-5A05-835F-F3AD-8C9A9A769141">
-<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
-<createdBy>dsteeve</createdBy>
-<createdTime>2015-04-26 19:26:53 UTC</createdTime>
-<ownerDesignName>appointmentMgr-v2</ownerDesignName>
-<initrans>2</initrans>
-<maxTrans>255</maxTrans>
-</SegmentOraclev10g>
