@@ -183,29 +183,29 @@ insert into employee (
   
 commit;
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10001', '10', 45, 45.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (100,'10001', '10', 45, 45.00);
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10001', '15', 30, 35.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (101,'10001', '15', 30, 35.00);
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10001', '20', 120, 110.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (102,'10001', '20', 120, 110.00);
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10001', '25', 90, 85.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (103,'10001', '25', 90, 85.00);
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10002', '10', 45, 35.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (104,'10002', '10', 45, 35.00);
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10002', '15', 30, 35.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (105,'10002', '15', 30, 35.00);
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10002', '20', 110, 110.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (106,'10002', '20', 110, 110.00);
 
-insert into employee_service  (employee_id, service_id, time_required, cost)
-values ('10002', '25', 80, 85.00);
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (107,'10002', '25', 80, 85.00);
 
 commit;
 
@@ -232,47 +232,47 @@ commit;
 -- employee schedule --
 
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10001', 'MON',10,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(1, '10001', 'MON',10,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10001', 'TUE',10,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(2, '10001', 'TUE',10,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10001', 'WED',10,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(3, '10001', 'WED',10,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10001', 'THU',10,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(4, '10001', 'THU',10,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10001', 'FRI',10,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(5, '10001', 'FRI',10,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10001', 'SAT',00,00,00,00,00,00,00,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(6, '10001', 'SAT',00,00,00,00,00,00,00,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10001', 'SUN',00,00,00,00,00,00,00,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(7, '10001', 'SUN',00,00,00,00,00,00,00,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10002', 'MON',9,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(8, '10002', 'MON',9,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10002', 'TUE',9,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(9, '10002', 'TUE',9,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10002', 'WED',9,00,12,00,13,00,18,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(10, '10002', 'WED',9,00,12,00,13,00,18,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10002', 'THU',9,00,12,00,13,00,16,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(11, '10002', 'THU',9,00,12,00,13,00,16,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10002', 'FRI',10,00,12,00,13,00,18,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(12, '10002', 'FRI',10,00,12,00,13,00,18,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10002', 'SAT',00,00,00,00,00,00,00,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(13, '10002', 'SAT',00,00,00,00,00,00,00,00);
 
-insert into schedule (employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
-values('10002', 'SUN',00,00,00,00,00,00,00,00);
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(14, '10002', 'SUN',00,00,00,00,00,00,00,00);
 
 
 
@@ -280,36 +280,34 @@ commit;
   
   
 insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
-employee_service_employee_fk, employee_service_service_fk)
-values(1, 45.00,'none','',to_timestamp('2015-04-15 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-04-15 11:00', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1000,10001,10);
+employee_service_id, is_cancelled)
+values(1, 45.00,'none','',to_timestamp('2015-04-15 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-04-15 11:00', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1000,100,0);
 
 insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
-employee_service_employee_fk, employee_service_service_fk)
-values(2, 45.00,'none','',to_timestamp('2015-03-15 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-03-15 10:45', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1000,10001,10);
-
-
-insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
-employee_service_employee_fk, employee_service_service_fk)
-values(3, 45.00,'none','',to_timestamp('2015-04-16 11:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-03-15 10:45', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1001,10001,10);
-
-insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
-employee_service_employee_fk, employee_service_service_fk)
-values(4, 45.00,'none','',to_timestamp('2015-04-16 13:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-03-15 13:45', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1002,10001,10);
+employee_service_id, is_cancelled)
+values(2, 45.00,'none','',to_timestamp('2015-03-15 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-03-15 10:45', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1000,100,0);
 
 
 insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
-employee_service_employee_fk, employee_service_service_fk)
-values(10, 80.00,'none','',to_timestamp('2015-02-11 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-02-11 12:00', 'YYYY-MM-DD HH24:MI'), 80.00, 15.00, 100,1000,10001,20);
+employee_service_id, is_cancelled)
+values(3, 45.00,'none','',to_timestamp('2015-04-16 11:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-03-15 10:45', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1001,100,0);
 
 insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
-employee_service_employee_fk, employee_service_service_fk)
-values(11, 80.00,'none','',to_timestamp('2015-02-12 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-02-12 12:00', 'YYYY-MM-DD HH24:MI'), 80.00, 15.00, 100,1003,10001,20);
+employee_service_id, is_cancelled)
+values(4, 45.00,'none','',to_timestamp('2015-04-16 13:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-03-15 13:45', 'YYYY-MM-DD HH24:MI'), 45.00, 5.00, 100,1002,100,0);
+
 
 insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
-employee_service_employee_fk, employee_service_service_fk)
-values(12, 80.00,'none','',to_timestamp('2015-02-14 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-02-14 12:00', 'YYYY-MM-DD HH24:MI'), 80.00, 10.00, 100,1004,10001,20);
+employee_service_id, is_cancelled)
+values(10, 80.00,'none','',to_timestamp('2015-02-11 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-02-11 12:00', 'YYYY-MM-DD HH24:MI'), 80.00, 15.00, 100,1000,102,0);
 
+insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
+employee_service_id, is_cancelled)
+values(11, 80.00,'none','',to_timestamp('2015-02-12 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-02-12 12:00', 'YYYY-MM-DD HH24:MI'), 80.00, 15.00, 100,1003,102,0);
 
+insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
+employee_service_id, is_cancelled)
+values(12, 80.00,'none','',to_timestamp('2015-02-14 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-02-14 12:00', 'YYYY-MM-DD HH24:MI'), 80.00, 10.00, 100,1004,102,0);
 
 
 commit;
