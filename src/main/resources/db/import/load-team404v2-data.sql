@@ -1,3 +1,6 @@
+delete from cancellation where 1=1;
+commit;
+
 delete from reservation where 1=1;
 commit;
 
@@ -8,6 +11,9 @@ delete schedule where 1=1;
 commit;
 
 delete employee where 1=1;
+commit;
+
+delete person where 1=1;
 commit;
 
 delete location where 1=1;
@@ -207,6 +213,12 @@ values (106,'10002', '20', 110, 110.00);
 insert into employee_service  (id, employee_id, service_id, time_required, cost)
 values (107,'10002', '25', 80, 85.00);
 
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (108,'10003', '35', 30, 15.00);
+
+insert into employee_service  (id, employee_id, service_id, time_required, cost)
+values (109,'10004', '35', 30, 20.00);
+
 commit;
 
 -- day of week --
@@ -274,7 +286,51 @@ values(13, '10002', 'SAT',00,00,00,00,00,00,00,00);
 insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
 values(14, '10002', 'SUN',00,00,00,00,00,00,00,00);
 
+--1003
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(15, '10003', 'MON',9,00,12,00,13,00,16,00);
 
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(16, '10003', 'TUE',9,00,12,00,13,00,16,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(17, '10003', 'WED',9,00,12,00,13,00,18,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(18, '10003', 'THU',9,00,12,00,13,00,16,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(19, '10003', 'FRI',10,00,12,00,13,00,18,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(20, '10003', 'SAT',00,00,00,00,00,00,00,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(21, '10003', 'SUN',00,00,00,00,00,00,00,00);
+
+--1004
+
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(22, '10004', 'MON',9,00,12,00,13,00,16,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(23, '10004', 'TUE',9,00,12,00,13,00,16,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(24, '10004', 'WED',9,00,12,00,13,00,18,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(25, '10004', 'THU',9,00,12,00,13,00,16,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(26, '10004', 'FRI',10,00,12,00,13,00,18,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(27, '10004', 'SAT',00,00,00,00,00,00,00,00);
+
+insert into schedule (id, employee_id, day_of_week, start_am_hour, start_am_minute, end_am_hour, end_am_minute, start_pm_hour, start_pm_minute, end_pm_hour, end_pm_minute)
+values(28, '10004', 'SUN',00,00,00,00,00,00,00,00);
 
 commit;
   
@@ -308,6 +364,18 @@ values(11, 80.00,'none','',to_timestamp('2015-02-12 10:00', 'YYYY-MM-DD HH24:MI'
 insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
 employee_service_id, is_cancelled)
 values(12, 80.00,'none','',to_timestamp('2015-02-14 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-02-14 12:00', 'YYYY-MM-DD HH24:MI'), 80.00, 10.00, 100,1004,102,0);
+
+insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
+employee_service_id, is_cancelled)
+values(13, 15.00,null,null,to_timestamp('2015-05-14 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-05-14 12:00', 'YYYY-MM-DD HH24:MI'), null, null, 100,1004,108,0);
+
+insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
+employee_service_id, is_cancelled)
+values(14, 15.00,null,null,to_timestamp('2015-05-04 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-05-04 12:00', 'YYYY-MM-DD HH24:MI'), null, null, 100,1004,108,0);
+
+insert into reservation (id, price_quoted, customer_comments,coupon_code,start_timestamp, end_timestamp, amount_paid, tip, location_fk, person_fk, 
+employee_service_id, is_cancelled)
+values(15, 15.00,null,null,to_timestamp('2015-05-08 10:00', 'YYYY-MM-DD HH24:MI'),to_timestamp('2015-05-08 12:00', 'YYYY-MM-DD HH24:MI'), null, null, 100,1005,108,0);
 
 
 commit;
