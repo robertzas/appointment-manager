@@ -14,8 +14,9 @@ BEGIN
 
 open emp_cursor for 
 SELECT r.*
-      from reservation r
-      where r.employee_service_employee_fk = employeeid
+from reservation r, employee_service es
+      where r.employee_service_id = es.id
+      and es.employee_id = employeeid
       and r.start_timestamp between fromtime and totime;
 
 END;
