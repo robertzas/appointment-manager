@@ -6,7 +6,7 @@
 --------------------------------------------------------
 set define off;
 
-  CREATE OR REPLACE PROCEDURE "TEAM404V2"."FINDNEXTTIME" (employee_id IN NUMBER, service_id IN NUMBER, morning IN NUMBER, 
+  CREATE OR REPLACE PROCEDURE FINDNEXTTIME (employee_id IN NUMBER, service_id IN NUMBER, morning IN NUMBER, 
   serviceDate IN TIMESTAMP, availableStartTime OUT TIMESTAMP, availableEndTime OUT TIMESTAMP) AS
   
       timeRequired  NUMBER(19,0);
