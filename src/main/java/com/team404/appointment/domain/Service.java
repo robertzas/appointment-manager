@@ -1,36 +1,33 @@
 package com.team404.appointment.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
 
-/**
- * The persistent class for the "SERVICE" database table.
- */
 @Entity
-@Table(name = "service")
-public class Service {
+@Table(name = "SERVICE")
+public class Service implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "is_active")
+    @Column(name = "IS_ACTIVE")
     private BigDecimal isActive;
 
-    @Column(name = "service")
+    @Column(name = "SERVICE")
     private String service;
 
-    //bi-directional many-to-one association to EmployeeService
+    @JsonIgnore
     @OneToMany(mappedBy = "service")
     private List<EmployeeService> employeeServices;
 
-    public Service() {
-    }
-
     public long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(long id) {
@@ -38,7 +35,7 @@ public class Service {
     }
 
     public BigDecimal getIsActive() {
-        return this.isActive;
+        return isActive;
     }
 
     public void setIsActive(BigDecimal isActive) {
@@ -46,7 +43,7 @@ public class Service {
     }
 
     public String getService() {
-        return this.service;
+        return service;
     }
 
     public void setService(String service) {
@@ -54,25 +51,10 @@ public class Service {
     }
 
     public List<EmployeeService> getEmployeeServices() {
-        return this.employeeServices;
+        return employeeServices;
     }
 
     public void setEmployeeServices(List<EmployeeService> employeeServices) {
         this.employeeServices = employeeServices;
     }
-
-    public EmployeeService addEmployeeService(EmployeeService employeeService) {
-        getEmployeeServices().add(employeeService);
-        employeeService.setService(this);
-
-        return employeeService;
-    }
-
-    public EmployeeService removeEmployeeService(EmployeeService employeeService) {
-        getEmployeeServices().remove(employeeService);
-        employeeService.setService(null);
-
-        return employeeService;
-    }
-
 }

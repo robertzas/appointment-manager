@@ -1,54 +1,66 @@
 package com.team404.appointment.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
-@Table(name = "employee_service")
-public class EmployeeService {
+@Table(name = "EMPLOYEE_SERVICE")
+public class EmployeeService implements Serializable {
 
-    @EmbeddedId
-    private EmployeeServicePK id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
     private BigDecimal cost;
 
-    @Column(name = "time_required")
+    @Column(name = "IS_ACTIVE")
+    private BigDecimal isActive;
+
+    @Column(name = "TIME_REQUIRED")
     private BigDecimal timeRequired;
 
-    //bi-directional many-to-one association to Employee
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private Employee employee;
 
-    //bi-directional many-to-one association to Service
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     private Service service;
 
-    //bi-directional many-to-one association to Reservation
+    @JsonIgnore
     @OneToMany(mappedBy = "employeeService")
     private List<Reservation> reservations;
 
-    public EmployeeService() {
+    public long getId() {
+        return id;
     }
 
-    public EmployeeServicePK getId() {
-        return this.id;
-    }
-
-    public void setId(EmployeeServicePK id) {
+    public void setId(long id) {
         this.id = id;
     }
 
     public BigDecimal getCost() {
-        return this.cost;
+        return cost;
     }
 
     public void setCost(BigDecimal cost) {
         this.cost = cost;
     }
 
+    public BigDecimal getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(BigDecimal isActive) {
+        this.isActive = isActive;
+    }
+
     public BigDecimal getTimeRequired() {
-        return this.timeRequired;
+        return timeRequired;
     }
 
     public void setTimeRequired(BigDecimal timeRequired) {
@@ -56,7 +68,7 @@ public class EmployeeService {
     }
 
     public Employee getEmployee() {
-        return this.employee;
+        return employee;
     }
 
     public void setEmployee(Employee employee) {
@@ -64,7 +76,7 @@ public class EmployeeService {
     }
 
     public Service getService() {
-        return this.service;
+        return service;
     }
 
     public void setService(Service service) {
@@ -72,25 +84,10 @@ public class EmployeeService {
     }
 
     public List<Reservation> getReservations() {
-        return this.reservations;
+        return reservations;
     }
 
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
-
-    public Reservation addReservation(Reservation reservation) {
-        getReservations().add(reservation);
-        reservation.setEmployeeService(this);
-
-        return reservation;
-    }
-
-    public Reservation removeReservation(Reservation reservation) {
-        getReservations().remove(reservation);
-        reservation.setEmployeeService(null);
-
-        return reservation;
-    }
-
 }

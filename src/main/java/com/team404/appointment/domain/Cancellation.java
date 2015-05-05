@@ -1,10 +1,12 @@
 package com.team404.appointment.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "cancellation")
-public class Cancellation {
+public class Cancellation implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,15 +14,22 @@ public class Cancellation {
 
     private String reason;
 
-    //bi-directional many-to-one association to Person
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cancelled_by_id")
-    private Person person;
+    @JoinColumn(name = "CANCELLED_BY_ID")
+    private Employee employee;
 
-    //bi-directional one-to-one association to Reservation
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "reservation_id")
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
     private Reservation reservation;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getReason() {
         return reason;
@@ -30,12 +39,12 @@ public class Cancellation {
         this.reason = reason;
     }
 
-    public Person getPerson() {
-        return person;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public Reservation getReservation() {
