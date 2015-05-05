@@ -4,7 +4,7 @@ FOR EACH ROW
 WHEN (new.is_CANCELLED = 1)
 
 DECLARE
-   cancelId number := :new.ID;
+   cancelId number := cancellation_seq.nextval;
    employeeId number;
    personId number := :new.person_fk;
 BEGIN
@@ -15,8 +15,8 @@ BEGIN
   
   DBMS_OUTPUT.PUT_LINE('employee id is: ' || employeeId);
   
-  INSERT INTO CANCELLATION 
-  Values (cancelId, cancelId, 'SICK', employeeId);
+  INSERT INTO CANCELLATION columns (id, reservation_id, reason, cancelled_by_id)
+  values (cancelId, :new.ID, 'SICK', employeeId);
   
   DBMS_OUTPUT.PUT_LINE('Emails sent out to cancelled appointment for ' || personId);
 END;
