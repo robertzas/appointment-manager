@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="SchemaObject" objectID="7B210428-327E-8248-9EAE-1D22E867102F" name="TEAM404" seqName="seg_0"/>
+   <object objectType="Table" objectID="2F4C1C76-C178-6EEE-6632-83D98D765E23" name="RESERVATION" seqName="seg_0"/>
+   <object objectType="Table" objectID="80D642A7-0F49-31F8-3B25-56797B90008A" name="EMPLOYEE_SERVICE" seqName="seg_0"/>
+   <object objectType="Table" objectID="97E1669E-B647-ECC3-C468-8A31BB5D4934" name="SCHEDULE" seqName="seg_0"/>
+   <object objectType="Table" objectID="A28FEF0E-260F-A618-B52C-804C745E031F" name="SERVICE" seqName="seg_0"/>
+   <object objectType="Table" objectID="A7E66B70-9D7A-847E-1761-FD6BC7F1CDCF" name="CANCELLATION" seqName="seg_0"/>
+   <object objectType="Table" objectID="BB667158-04F8-55A0-B7CB-1EB9B7EFAD24" name="EMPLOYEE" seqName="seg_0"/>
+   <object objectType="Table" objectID="C42FCB6F-22B7-FCC7-8A63-BA195DF3DBED" name="PERSON" seqName="seg_0"/>
+   <object objectType="Table" objectID="CB73CE0A-0D82-8B68-455C-D921A3E1684C" name="LOCATION" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="26540D04-35BF-DACE-240D-D927BC8B29A7" name="FK_EMPSERV_EMPLOYEE" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="2FE6A071-0CF6-DD5D-B782-1BD2010227F7" name="FK_RESERVATION_PERSON" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="83EDD1FE-C18A-17AA-8EBD-63E6B7E6682D" name="CANCELLATION_RESERVATION_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="881AC623-342E-81E2-F95B-0A8DBD6F3825" name="FK_RESERVATION_EMPL_SERV" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="A17446AD-6851-CC54-80A7-CB38AE95BDEF" name="FK_SCHEDULE_EMPLOYEE" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="B5AD7F56-1D13-EBC5-55D6-ACFC0E69FC44" name="FK_EMPLOYEE_PERSON" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="C4E6206B-F094-AEC6-A589-956627C0C105" name="FK_RESERVATION_LOCATION" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="D1DB1033-B2AE-2DD3-5BFC-E51B38D8B6B4" name="CANCELLATION_PERSON_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="EB8E2487-AB2E-395C-E1F2-40EDAB123BEF" name="FK_PERSON_LOCATION" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="EFFD5BB2-04BF-AAE8-7642-D692FAAD6FAB" name="FK_EMPSERV_SERVICE" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

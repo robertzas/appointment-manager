@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>
+   <object objectType="TSpace" objectID="92D3308D-DA9E-FA25-5CE9-A3D7466878BC" name="USERS" seqName="seg_0"/>
+   <object objectType="User" objectID="MDSYS" name="MDSYS" seqName="seg_0"/>
+   <object objectType="User" objectID="PUBLIC" name="PUBLIC" seqName="seg_0"/>
+   <object objectType="User" objectID="887A9EA9-DE87-0B6D-B63C-462F4B2A3AA9" name="TEAM404" seqName="seg_0"/>
+   <object objectType="SType" objectID="47E390DE-0671-C4B1-8428-0F45CBEE18F8" name="SDO_GEOMETRY" seqName="seg_0"/>
+   <object objectType="SType" objectID="F72C39E0-D1CA-8821-2AD7-A1E95A37D3D1" name="XMLTYPE" seqName="seg_0"/>
+   <object objectType="Table" objectID="2F4C1C76-C178-6EEE-6632-83D98D765E23" name="RESERVATION" seqName="seg_0"/>
+   <object objectType="Table" objectID="80D642A7-0F49-31F8-3B25-56797B90008A" name="EMPLOYEE_SERVICE" seqName="seg_0"/>
+   <object objectType="Table" objectID="97E1669E-B647-ECC3-C468-8A31BB5D4934" name="SCHEDULE" seqName="seg_0"/>
+   <object objectType="Table" objectID="A28FEF0E-260F-A618-B52C-804C745E031F" name="SERVICE" seqName="seg_0"/>
+   <object objectType="Table" objectID="A7E66B70-9D7A-847E-1761-FD6BC7F1CDCF" name="CANCELLATION" seqName="seg_0"/>
+   <object objectType="Table" objectID="BB667158-04F8-55A0-B7CB-1EB9B7EFAD24" name="EMPLOYEE" seqName="seg_0"/>
+   <object objectType="Table" objectID="C42FCB6F-22B7-FCC7-8A63-BA195DF3DBED" name="PERSON" seqName="seg_0"/>
+   <object objectType="Table" objectID="CB73CE0A-0D82-8B68-455C-D921A3E1684C" name="LOCATION" seqName="seg_0"/>
+   <object objectType="Segment" objectID="FF219045-5A05-835F-F3AD-8C9A9A769141" name="Storage1" seqName="seg_0"/>
+   <object objectType="Segment" objectID="11624292-B0F5-44BB-A40E-066E1B9974CB" name="Storage2" seqName="seg_0"/>
+   <object objectType="Segment" objectID="C4BA5400-EE26-88DF-575A-8BFC0799ABAB" name="Storage3" seqName="seg_0"/>
+   <object objectType="Sequence" objectID="AEBDE2C6-87E5-1F4E-1F6B-8BD74F585F49" name="HIBERNATE_SEQUENCE" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.StorageDesignOraclev11g>

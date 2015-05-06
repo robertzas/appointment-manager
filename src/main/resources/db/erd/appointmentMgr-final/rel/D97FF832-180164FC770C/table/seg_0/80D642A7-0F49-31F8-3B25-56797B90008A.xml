@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="80D642A7-0F49-31F8-3B25-56797B90008A" name="EMPLOYEE_SERVICE">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>BDA85A08-9FA0-6E77-3265-7E02C74FD04C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="1698F370-96A2-AC6C-62CE-A892EDBDE66D">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-05-01 01:14:17 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLOYEE_ID" id="4FAB6A9C-D010-FC36-DB42-973F966512E9">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>AE8EC7EA-C66A-DDEC-417F-45F8838578AE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>8C473839-9D5E-A052-617C-07F9B91CD98A</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="26540D04-35BF-DACE-240D-D927BC8B29A7" referredColumn="8C473839-9D5E-A052-617C-07F9B91CD98A"/>
+</associations>
+</Column>
+<Column name="SERVICE_ID" id="1D1050F4-878A-B574-D116-4840E5A2B316">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>D815697A-FD3F-9D6D-5769-A19001D9790A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>C599B94A-83C1-300E-093B-85F27A4B44B6</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EFFD5BB2-04BF-AAE8-7642-D692FAAD6FAB" referredColumn="C599B94A-83C1-300E-093B-85F27A4B44B6"/>
+</associations>
+</Column>
+<Column name="COST" id="2824AF8E-F4F5-8216-7C90-9D4A737DED7C">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>D74CF3A7-F412-D8F7-AEF4-8E28C9B97830</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIME_REQUIRED" id="04CBD9D9-A292-6D31-7863-49F023662B11">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>37E8A460-AE81-C103-C57A-1994A0E2FC96</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IS_ACTIVE" id="E6C357D0-9B8D-414B-DA7F-36AA4D9FC65E">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-05-01 01:23:55 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AE521A8-0140-9944-8C91-0E4721F536E8" name="EMPLOYEE_SERVICE_PK">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:52:17 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1698F370-96A2-AC6C-62CE-A892EDBDE66D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="60B447BF-D854-657E-55FF-F9739789CE26" name="EMPLOYEE_SERVICE__UNIQ">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-05-01 01:27:18 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FAB6A9C-D010-FC36-DB42-973F966512E9"/>
+<colUsage columnID="1D1050F4-878A-B574-D116-4840E5A2B316"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4432D663-C69F-2229-D72E-477BBD3F7CFB" name="FK_EMPSERV_SERVICE">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D1050F4-878A-B574-D116-4840E5A2B316"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F7C66859-6843-B619-F18A-E7E3465C2C73" name="FK_EMPSERV_EMPLOYEE">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FAB6A9C-D010-FC36-DB42-973F966512E9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

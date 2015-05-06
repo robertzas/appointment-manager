@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D1DB1033-B2AE-2DD3-5BFC-E51B38D8B6B4" name="CANCELLATION_PERSON_FK">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 20:09:27 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<containerWithKeyObject>A7E66B70-9D7A-847E-1761-FD6BC7F1CDCF</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>442DE768-418A-493F-452D-439A9715FDD7</localFKIndex>
+<keyObject>67B8AD4B-F187-9BE6-C098-E63510996682</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BB667158-04F8-55A0-B7CB-1EB9B7EFAD24" name="EMPLOYEE">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>7C61EEE4-CE12-D6B8-7C33-7E80CE5860FB</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="8C473839-9D5E-A052-617C-07F9B91CD98A">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>BDCC6E59-CB28-E8FD-4D18-FCCC9D551A47</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IS_ADMIN" id="21ADCCF2-354B-D9BC-9F67-435CC4827249">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>EADD6E52-1D20-D7E4-14B3-8C094D4848B6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ALLOWS_COUPONS" id="9FF4E46A-CC2C-47B0-D466-D25A55995F68">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 21:05:49 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERSON_ID" id="772B3A72-ACAB-04C9-6DDA-D5EF398450E8">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>DBC3AC86-D909-E873-8A37-50D25B270FCA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>71E5E31C-F6F3-04E5-23DF-1DAA2CA990E5</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5AD7F56-1D13-EBC5-55D6-ACFC0E69FC44" referredColumn="71E5E31C-F6F3-04E5-23DF-1DAA2CA990E5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="03739768-F3B8-C201-0BB3-3739AD092A66" name="EMPLOYEE_PK">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>976ED725-B618-FE5F-3197-0EC908D2DBC8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C473839-9D5E-A052-617C-07F9B91CD98A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6699C3D1-0884-4D62-4826-A8D6540E09B7" name="UK_PERSON_UNIQUE_CONSTRAINT">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>7B21B40F-D747-35FC-46D3-E9ED75CBFB45</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="772B3A72-ACAB-04C9-6DDA-D5EF398450E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AC4D53C6-49FB-C9C1-D917-E10CE4CD1017" name="UK_PERSON_IDX">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>7B47B2E9-3E3E-950F-3CCD-D714FF6EDE45</importedID>
+<indexState>Unique Plain Index</indexState>
+<schemaObject>7B210428-327E-8248-9EAE-1D22E867102F</schemaObject>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="772B3A72-ACAB-04C9-6DDA-D5EF398450E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B858C640-E6B0-3EFC-6BC8-71A32A49671D" name="FK_EMPLOYEE_PERSON">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="772B3A72-ACAB-04C9-6DDA-D5EF398450E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
