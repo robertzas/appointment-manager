@@ -11,54 +11,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Sunday</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="info">
-            <td>Tuesday</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="success">
-            <td>Wednesday</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="danger">
-            <td>Thursday</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="warning">
-            <td>Friday</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-        </tr>
-        <tr class="active">
-            <td>Saturday</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
-            <td>Column content</td>
+        <tr ng-repeat="schedule in model.schedules">
+            <td>{{schedule.dayOfWeek}}</td>
+            <td>{{schedule.startAmHour}}:{{schedule.startAmMinute}}</td>
+            <td>{{schedule.endAmHour}}:{{schedule.endAmMinute}}</td>
+            <td>{{schedule.startPmHour}}:{{schedule.startPmMinute}}</td>
+            <td>{{schedule.endPmHour}}:{{schedule.endPmMinute}}</td>
         </tr>
         </tbody>
     </table>

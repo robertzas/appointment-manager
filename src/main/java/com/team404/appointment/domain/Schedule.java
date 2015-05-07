@@ -1,54 +1,67 @@
 package com.team404.appointment.domain;
 
-import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Table(name = "schedule")
-public class Schedule {
+@Table(name = "SCHEDULE")
+public class Schedule implements Serializable {
 
-    @EmbeddedId
-    private SchedulePK id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-    @Column(name = "end_am_hour")
+    @Column(name = "DAY_OF_WEEK")
+    private String dayOfWeek;
+
+    @Column(name = "END_AM_HOUR")
     private String endAmHour;
 
-    @Column(name = "end_am_minute")
+    @Column(name = "END_AM_MINUTE")
     private String endAmMinute;
 
-    @Column(name = "end_pm_hour")
+    @Column(name = "END_PM_HOUR")
     private String endPmHour;
 
-    @Column(name = "end_pm_minute")
+    @Column(name = "END_PM_MINUTE")
     private String endPmMinute;
 
-    @Column(name = "start_am_hour")
+    @Column(name = "START_AM_HOUR")
     private String startAmHour;
 
-    @Column(name = "start_am_minute")
+    @Column(name = "START_AM_MINUTE")
     private String startAmMinute;
 
-    @Column(name = "start_pm_hour")
+    @Column(name = "START_PM_HOUR")
     private String startPmHour;
 
-    @Column(name = "start_pm_minute")
+    @Column(name = "START_PM_MINUTE")
     private String startPmMinute;
 
-    public Schedule() {
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Employee employee;
+
+    public long getId() {
+        return id;
     }
 
-    public SchedulePK getId() {
-        return this.id;
-    }
-
-    public void setId(SchedulePK id) {
+    public void setId(long id) {
         this.id = id;
     }
 
+    public String getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    public void setDayOfWeek(String dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
+    }
+
     public String getEndAmHour() {
-        return this.endAmHour;
+        return endAmHour;
     }
 
     public void setEndAmHour(String endAmHour) {
@@ -56,7 +69,7 @@ public class Schedule {
     }
 
     public String getEndAmMinute() {
-        return this.endAmMinute;
+        return endAmMinute;
     }
 
     public void setEndAmMinute(String endAmMinute) {
@@ -64,7 +77,7 @@ public class Schedule {
     }
 
     public String getEndPmHour() {
-        return this.endPmHour;
+        return endPmHour;
     }
 
     public void setEndPmHour(String endPmHour) {
@@ -72,7 +85,7 @@ public class Schedule {
     }
 
     public String getEndPmMinute() {
-        return this.endPmMinute;
+        return endPmMinute;
     }
 
     public void setEndPmMinute(String endPmMinute) {
@@ -80,7 +93,7 @@ public class Schedule {
     }
 
     public String getStartAmHour() {
-        return this.startAmHour;
+        return startAmHour;
     }
 
     public void setStartAmHour(String startAmHour) {
@@ -88,7 +101,7 @@ public class Schedule {
     }
 
     public String getStartAmMinute() {
-        return this.startAmMinute;
+        return startAmMinute;
     }
 
     public void setStartAmMinute(String startAmMinute) {
@@ -96,7 +109,7 @@ public class Schedule {
     }
 
     public String getStartPmHour() {
-        return this.startPmHour;
+        return startPmHour;
     }
 
     public void setStartPmHour(String startPmHour) {
@@ -104,12 +117,18 @@ public class Schedule {
     }
 
     public String getStartPmMinute() {
-        return this.startPmMinute;
+        return startPmMinute;
     }
 
     public void setStartPmMinute(String startPmMinute) {
         this.startPmMinute = startPmMinute;
     }
 
+    public Employee getEmployee() {
+        return employee;
+    }
 
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
 }

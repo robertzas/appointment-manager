@@ -1,52 +1,47 @@
 package com.team404.appointment.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
-
-/**
- * The persistent class for the LOCATION database table.
- */
 @Entity
-@Table(name = "location")
-public class Location {
+public class Location implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "address_line1")
+    @Column(name = "ADDRESS_LINE1")
     private String addressLine1;
 
-    @Column(name = "address_line2")
+    @Column(name = "ADDRESS_LINE2")
     private String addressLine2;
 
     private String city;
 
-    @Column(name = "geolocation_dms")
+    @Column(name = "GEOLOCATION_DMS")
     private String geolocationDms;
 
     private String name;
 
-    @Column(name = "state_code")
+    @Column(name = "STATE_CODE")
     private String stateCode;
 
-    @Column(name = "zip_code")
+    @Column(name = "ZIP_CODE")
     private String zipCode;
 
-    //bi-directional many-to-one association to Person
+    @JsonIgnore
     @OneToMany(mappedBy = "location")
     private List<Person> persons;
 
-    //bi-directional many-to-one association to Reservation
+    @JsonIgnore
     @OneToMany(mappedBy = "location")
     private List<Reservation> reservations;
 
-    public Location() {
-    }
-
     public long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(long id) {
@@ -54,7 +49,7 @@ public class Location {
     }
 
     public String getAddressLine1() {
-        return this.addressLine1;
+        return addressLine1;
     }
 
     public void setAddressLine1(String addressLine1) {
@@ -62,7 +57,7 @@ public class Location {
     }
 
     public String getAddressLine2() {
-        return this.addressLine2;
+        return addressLine2;
     }
 
     public void setAddressLine2(String addressLine2) {
@@ -70,7 +65,7 @@ public class Location {
     }
 
     public String getCity() {
-        return this.city;
+        return city;
     }
 
     public void setCity(String city) {
@@ -78,7 +73,7 @@ public class Location {
     }
 
     public String getGeolocationDms() {
-        return this.geolocationDms;
+        return geolocationDms;
     }
 
     public void setGeolocationDms(String geolocationDms) {
@@ -86,7 +81,7 @@ public class Location {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -94,7 +89,7 @@ public class Location {
     }
 
     public String getStateCode() {
-        return this.stateCode;
+        return stateCode;
     }
 
     public void setStateCode(String stateCode) {
@@ -102,7 +97,7 @@ public class Location {
     }
 
     public String getZipCode() {
-        return this.zipCode;
+        return zipCode;
     }
 
     public void setZipCode(String zipCode) {
@@ -110,47 +105,18 @@ public class Location {
     }
 
     public List<Person> getPersons() {
-        return this.persons;
+        return persons;
     }
 
     public void setPersons(List<Person> persons) {
         this.persons = persons;
     }
 
-    public Person addPerson(Person person) {
-        getPersons().add(person);
-        person.setLocation(this);
-
-        return person;
-    }
-
-    public Person removePerson(Person person) {
-        getPersons().remove(person);
-        person.setLocation(null);
-
-        return person;
-    }
-
     public List<Reservation> getReservations() {
-        return this.reservations;
+        return reservations;
     }
 
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
-
-    public Reservation addReservation(Reservation reservation) {
-        getReservations().add(reservation);
-        reservation.setLocation(this);
-
-        return reservation;
-    }
-
-    public Reservation removeReservation(Reservation reservation) {
-        getReservations().remove(reservation);
-        reservation.setLocation(null);
-
-        return reservation;
-    }
-
 }

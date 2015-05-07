@@ -1,80 +1,69 @@
 package com.team404.appointment.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
-
-/**
- * The persistent class for the PERSON database table.
- */
 @Entity
-@Table(name = "person")
 public class Person implements Serializable {
-    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "date_joined")
-    private Timestamp dateJoined;
+    @Column(name = "DATE_JOINED")
+    private Date dateJoined;
 
-    @Column(name = "email_address")
+    @Column(name = "EMAIL_ADDRESS")
     private String emailAddress;
 
-    @Column(name = "first_name")
+    @Column(name = "FIRST_NAME")
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "LAST_NAME")
     private String lastName;
 
     private String password;
 
-    @Column(name = "phone_number")
+    @Column(name = "PHONE_NUMBER")
     private String phoneNumber;
 
     private String username;
 
-    //bi-directional many-to-one association to Cancellation
-    @OneToMany(mappedBy = "person")
-    private List<Cancellation> cancellations;
-
-    //bi-directional many-to-one association to Employee
+    @JsonIgnore
     @OneToMany(mappedBy = "person")
     private List<Employee> employees;
 
-    //bi-directional many-to-one association to Location
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PREFERRED_LOCATION_ID")
     private Location location;
 
-    //bi-directional many-to-one association to Reservation
+    @JsonIgnore
     @OneToMany(mappedBy = "person")
     private List<Reservation> reservations;
 
-    public Person() {
-    }
-
     public long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(long id) {
         this.id = id;
     }
 
-    public Timestamp getDateJoined() {
-        return this.dateJoined;
+    public Date getDateJoined() {
+        return dateJoined;
     }
 
-    public void setDateJoined(Timestamp dateJoined) {
+    public void setDateJoined(Date dateJoined) {
         this.dateJoined = dateJoined;
     }
 
     public String getEmailAddress() {
-        return this.emailAddress;
+        return emailAddress;
     }
 
     public void setEmailAddress(String emailAddress) {
@@ -82,7 +71,7 @@ public class Person implements Serializable {
     }
 
     public String getFirstName() {
-        return this.firstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -90,7 +79,7 @@ public class Person implements Serializable {
     }
 
     public String getLastName() {
-        return this.lastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
@@ -98,7 +87,7 @@ public class Person implements Serializable {
     }
 
     public String getPassword() {
-        return this.password;
+        return password;
     }
 
     public void setPassword(String password) {
@@ -106,7 +95,7 @@ public class Person implements Serializable {
     }
 
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return phoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -114,59 +103,23 @@ public class Person implements Serializable {
     }
 
     public String getUsername() {
-        return this.username;
+        return username;
     }
 
     public void setUsername(String username) {
         this.username = username;
     }
 
-    public List<Cancellation> getCancellations() {
-        return this.cancellations;
-    }
-
-    public void setCancellations(List<Cancellation> cancellations) {
-        this.cancellations = cancellations;
-    }
-
-    public Cancellation addCancellation(Cancellation cancellation) {
-        getCancellations().add(cancellation);
-        cancellation.setPerson(this);
-
-        return cancellation;
-    }
-
-    public Cancellation removeCancellation(Cancellation cancellation) {
-        getCancellations().remove(cancellation);
-        cancellation.setPerson(null);
-
-        return cancellation;
-    }
-
     public List<Employee> getEmployees() {
-        return this.employees;
+        return employees;
     }
 
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
 
-    public Employee addEmployee(Employee employee) {
-        getEmployees().add(employee);
-        employee.setPerson(this);
-
-        return employee;
-    }
-
-    public Employee removeEmployee(Employee employee) {
-        getEmployees().remove(employee);
-        employee.setPerson(null);
-
-        return employee;
-    }
-
     public Location getLocation() {
-        return this.location;
+        return location;
     }
 
     public void setLocation(Location location) {
@@ -174,25 +127,10 @@ public class Person implements Serializable {
     }
 
     public List<Reservation> getReservations() {
-        return this.reservations;
+        return reservations;
     }
 
     public void setReservations(List<Reservation> reservations) {
         this.reservations = reservations;
     }
-
-    public Reservation addReservation(Reservation reservation) {
-        getReservations().add(reservation);
-        reservation.setPerson(this);
-
-        return reservation;
-    }
-
-    public Reservation removeReservation(Reservation reservation) {
-        getReservations().remove(reservation);
-        reservation.setPerson(null);
-
-        return reservation;
-    }
-
 }

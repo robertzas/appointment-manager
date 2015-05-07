@@ -1,42 +1,43 @@
 package com.team404.appointment.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
-
 @Entity
-@Table(name = "employee")
-public class Employee {
+public class Employee implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "schedule_pk")
     private long id;
 
-    @Column(name = "allows_coupons")
+    @Column(name = "ALLOWS_COUPONS")
     private BigDecimal allowsCoupons;
 
-    @Column(name = "is_admin")
+    @Column(name = "IS_ADMIN")
     private BigDecimal isAdmin;
 
-    //bi-directional many-to-one association to Person
-    @OneToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    @OneToMany(mappedBy = "employee")
+    private List<Cancellation> cancellations;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
     private Person person;
 
-    //bi-directional many-to-one association to EmployeeService
+    @JsonIgnore
     @OneToMany(mappedBy = "employee")
     private List<EmployeeService> employeeServices;
 
-    //bi-directional many-to-one association to Schedule
-    @OneToMany(mappedBy = "schedule_pk")
+    @JsonIgnore
+    @OneToMany(mappedBy = "employee")
     private List<Schedule> schedules;
 
-    public Employee() {
-    }
-
     public long getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(long id) {
@@ -44,7 +45,7 @@ public class Employee {
     }
 
     public BigDecimal getAllowsCoupons() {
-        return this.allowsCoupons;
+        return allowsCoupons;
     }
 
     public void setAllowsCoupons(BigDecimal allowsCoupons) {
@@ -52,15 +53,23 @@ public class Employee {
     }
 
     public BigDecimal getIsAdmin() {
-        return this.isAdmin;
+        return isAdmin;
     }
 
     public void setIsAdmin(BigDecimal isAdmin) {
         this.isAdmin = isAdmin;
     }
 
+    public List<Cancellation> getCancellations() {
+        return cancellations;
+    }
+
+    public void setCancellations(List<Cancellation> cancellations) {
+        this.cancellations = cancellations;
+    }
+
     public Person getPerson() {
-        return this.person;
+        return person;
     }
 
     public void setPerson(Person person) {
@@ -68,45 +77,18 @@ public class Employee {
     }
 
     public List<EmployeeService> getEmployeeServices() {
-        return this.employeeServices;
+        return employeeServices;
     }
 
     public void setEmployeeServices(List<EmployeeService> employeeServices) {
         this.employeeServices = employeeServices;
     }
 
-    public EmployeeService addEmployeeService(EmployeeService employeeService) {
-        getEmployeeServices().add(employeeService);
-        employeeService.setEmployee(this);
-
-        return employeeService;
-    }
-
-    public EmployeeService removeEmployeeService(EmployeeService employeeService) {
-        getEmployeeServices().remove(employeeService);
-        employeeService.setEmployee(null);
-
-        return employeeService;
-    }
-
     public List<Schedule> getSchedules() {
-        return this.schedules;
+        return schedules;
     }
 
     public void setSchedules(List<Schedule> schedules) {
         this.schedules = schedules;
     }
-
-    public Schedule addSchedule(Schedule schedule) {
-        getSchedules().add(schedule);
-
-        return schedule;
-    }
-
-    public Schedule removeSchedule(Schedule schedule) {
-        getSchedules().remove(schedule);
-
-        return schedule;
-    }
-
 }
