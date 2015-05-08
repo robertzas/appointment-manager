@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="team404-v2-export_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_1_0_0" id="010C883E-00F5-950C-E671-55E68FC83968">
+         <createdBy>dsteeve</createdBy>
+         <createdTime>2015-04-26 19:27:40 UTC</createdTime>
+         <ownerDesignName>appointmentMgr-final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>1</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>team404-v2-export_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_19_0_0" id="28D16C4A-F3CA-C69F-9D1E-028641AF160F">
+         <createdBy>dsteeve</createdBy>
+         <createdTime>2015-04-26 19:27:40 UTC</createdTime>
+         <ownerDesignName>appointmentMgr-final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>19</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>team404-v2-export_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_0_0" id="A9A9B88A-F87A-2045-9E72-291F8C330CEE">
+         <createdBy>dsteeve</createdBy>
+         <createdTime>2015-04-26 19:27:40 UTC</createdTime>
+         <ownerDesignName>appointmentMgr-final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>10</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>team404-v2-export_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="D5251BA4-DEF6-F8DE-9DC0-B0CB3BCDCF82">
+         <createdBy>dsteeve</createdBy>
+         <createdTime>2015-04-26 19:27:40 UTC</createdTime>
+         <ownerDesignName>appointmentMgr-final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>6</dataTypePrecision>
+         <fileName>team404-v2-export_Domains</fileName>
+         <logicalDatatype>LOGDT015</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_255 CHAR" id="EF792D06-579A-76C9-1D40-307A28390043">
+         <createdBy>dsteeve</createdBy>
+         <createdTime>2015-04-26 19:27:40 UTC</createdTime>
+         <ownerDesignName>appointmentMgr-final</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>255 CHAR</dataTypeSize>
+         <fileName>team404-v2-export_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

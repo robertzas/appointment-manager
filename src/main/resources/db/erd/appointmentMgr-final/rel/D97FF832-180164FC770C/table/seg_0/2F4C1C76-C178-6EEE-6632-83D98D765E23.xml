@@ -1,0 +1,218 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2F4C1C76-C178-6EEE-6632-83D98D765E23" name="RESERVATION">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>91085994-8674-D84F-439F-B8AE5A4E7244</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4F3BFD8B-960E-5594-A71E-7E434B62B6CA">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>B761FD16-CB49-2F05-5E74-A73503121E58</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE_QUOTED" id="3A1C5ABA-D688-5C53-F54A-C72EDA3824F7">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>BCBB867E-832A-FAE6-7933-8DCA8A6BB02B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUSTOMER_COMMENTS" id="154141B5-F985-1E59-ED32-4E9AC8E1B758">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>8AC54316-3DFD-E862-0F0A-AA3D08D4CEBC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUPON_CODE" id="4E0EB765-E7F3-89C8-B134-377BCE8D4BA8">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>A32F964F-511D-C40D-7DF2-AE8112C49ADB</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="START_TIMESTAMP" id="320C6CE5-E54C-FC4D-BF15-D6A1AFCED662">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>FEF14176-B5D8-2981-BC13-4144EC8E5D85</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_TIMESTAMP" id="30468636-D059-1DD2-D58B-FB85A6764116">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>984C6842-7DAA-288B-DB07-12C3E32AE9D3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT046</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AMOUNT_PAID" id="3B1F2840-DC03-1A20-1D6A-42052AC7CDD4">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>BE68F0F2-BC21-B744-8350-DA87C96372C8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIP" id="AB952F2E-FB6E-1675-A22D-D3399066F1AB">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>C7F0D490-6E71-5052-7F0A-B68B50771484</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCATION_FK" id="9FD9673C-E9EC-3626-5546-801F9C90D33C">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>88FEB129-BECA-549E-BABC-F7B265A3FF2B</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<delegate>A1DBFD7F-CD9E-5D6B-2A8D-BE44E57AFC11</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4E6206B-F094-AEC6-A589-956627C0C105" referredColumn="A1DBFD7F-CD9E-5D6B-2A8D-BE44E57AFC11"/>
+</associations>
+</Column>
+<Column name="PERSON_FK" id="65889DA9-F3FA-A48F-DD6D-ED0C7528ECB1">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>81069BD7-0276-2E81-D4AF-7E04F4ADDFB0</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>71E5E31C-F6F3-04E5-23DF-1DAA2CA990E5</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2FE6A071-0CF6-DD5D-B782-1BD2010227F7" referredColumn="71E5E31C-F6F3-04E5-23DF-1DAA2CA990E5"/>
+</associations>
+</Column>
+<Column name="EMPLOYEE_SERVICE_ID" id="A94FA49D-4845-0270-2CE2-BAF91FBE4018">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-05-01 01:15:01 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>28D16C4A-F3CA-C69F-9D1E-028641AF160F</domain>
+<delegate>1698F370-96A2-AC6C-62CE-A892EDBDE66D</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="881AC623-342E-81E2-F95B-0A8DBD6F3825" referredColumn="1698F370-96A2-AC6C-62CE-A892EDBDE66D"/>
+</associations>
+</Column>
+<Column name="IS_CANCELLED" id="93F440CF-7C90-FD47-70D4-F6998EB02676">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-05-01 01:22:08 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="17A86321-8620-261A-13C1-54932F56051D" name="RESERVATION_PK">
+<sourceDDLFile>team404-v2-export.sql</sourceDDLFile>
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<importedID>14D02266-8314-A136-06DA-5DC02AE662E3</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F3BFD8B-960E-5594-A71E-7E434B62B6CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="095EA42B-A9E1-0339-7D08-C37AA2F6BC91" name="FK_RESERVATION_PERSON">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:40 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="65889DA9-F3FA-A48F-DD6D-ED0C7528ECB1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E75003F-B117-A409-433A-F11A7C585FA3" name="FK_RESERVATION_LOCATION">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:27:41 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FD9673C-E9EC-3626-5546-801F9C90D33C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="78B7433A-982D-A606-B8A3-8BECDCDD1149" name="FK_RESERVATION_EMPL_SERV">
+<createdBy>dsteeve</createdBy>
+<createdTime>2015-04-26 19:53:27 UTC</createdTime>
+<ownerDesignName>appointmentMgr-final</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A94FA49D-4845-0270-2CE2-BAF91FBE4018"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
