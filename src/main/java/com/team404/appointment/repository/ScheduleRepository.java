@@ -5,5 +5,6 @@ import com.team404.appointment.domain.Schedule;
 import java.util.List;
 
 public interface ScheduleRepository {
-    List<Schedule> findAll();
+
+    List<Schedule> findByEmployeeId(long employeeId);
 }

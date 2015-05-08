@@ -3,15 +3,12 @@
 </p>
 <li>
     <div class="btn-group" dropdown>
-        <button type="button" class="btn btn-info" dropdown-toggle>Beautician</button>
+        <button type="button" class="btn btn-info" dropdown-toggle>Employee</button>
         <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Beautician 1</a></li>
-            <li><a href="#">Beautician 2</a></li>
-            <li><a href="#">Beautician 3</a></li>
-            <li><a href="#">Beautician 4</a></li>
-            <li><a href="#">Beautician 5</a></li>
-            <li><a href="#">Beautician 6</a></li>
-            <li><a href="#">Beautician 7</a></li>
+            <li ng-repeat="employee in model.employees">
+                <button ng-click="model.getSchedule(employee)">{{employee.firstName}}&nbsp;{{employee.lastName}}
+                </button>
+            </li>
         </ul>
     </div>
 </li>

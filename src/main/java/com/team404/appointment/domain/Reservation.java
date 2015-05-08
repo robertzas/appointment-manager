@@ -8,6 +8,13 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "GETCUSTOMERHISTORY",
+                query = "CALL GETCUSTOMERHISTORY(:fromdatetime, :todatetime, :customerid)",
+                resultClass = Reservation.class
+        )
+})
 @Entity
 public class Reservation implements Serializable {
 

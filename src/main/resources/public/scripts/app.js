@@ -3,15 +3,33 @@ angular.module('app', ['ui.bootstrap','br.fullpage'])
     $.material.init()
 
     $scope.model = {};
-
     $scope.model.schedules = [];
+    $scope.model.employees = [];
+    $scope.model.people = []
+    $scope.model.reservations = [];
 
-    $http.get('/schedule').success(function(data){
-        $scope.model.schedules = data;
+    $http.get('/employees').success(function(data){
+        $scope.model.employees = data;
     });
 
+    $http.get('/people').success(function(data){
+        $scope.model.people = data;
+    });
 
-    // CALANDER
+    $scope.model.getSchedules = function(employee){
+        $http.get('/schedules/' + employee.id).success(function(data){
+                $scope.model.schedules = data;
+            });
+    }
+
+    $scope.model.getReservations = function(person){
+        $http.get('/reservations/' + person.id).success(function(data){
+                $scope.model.reservations = data;
+            });
+    }
+
+
+    // start CALENDER
     $scope.today = function() {
         $scope.dt = new Date();
     };
