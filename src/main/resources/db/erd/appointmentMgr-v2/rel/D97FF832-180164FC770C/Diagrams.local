@@ -1,4 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<oracle.dbtools.crest.model.design.relational.RelationalDesign>
-   <object objectType="main_view" objectID="2996515D-D149-317D-0C9B-E895CE97C4D1" name="team404-v2-export" visible="true"/>
-</oracle.dbtools.crest.model.design.relational.RelationalDesign>
